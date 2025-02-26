@@ -354,7 +354,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity implements Sha
             fileDialog.addFileListener(new FileDialog.FileSelectedListener() {
                 public void fileSelected(File file) {
                     String full = file.getAbsolutePath();
-                    LexData.setDatabase(getActivity().getApplicationContext(),file.getName());
+                    LexData.setDatabase(file.getName());
                     LexData.setDatabasePath(getActivity().getApplicationContext(),full.substring(0,full.lastIndexOf(File.separator)));
                     Utils.setDatabasePreference(getActivity().getApplicationContext());
                     databaseAccess = DatabaseAccess.getInstance(getActivity().getApplicationContext() , LexData.getDatabasePath(), LexData.getDatabase());

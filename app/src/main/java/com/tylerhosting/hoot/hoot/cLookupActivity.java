@@ -114,7 +114,7 @@ String word = text.toString().toUpperCase();
             }
             // set database lexdata to saved path
             else {
-                LexData.setDatabase(getApplicationContext(), fullpath.substring(fullpath.lastIndexOf(File.separator)));
+                LexData.setDatabase(fullpath.substring(fullpath.lastIndexOf(File.separator)));
                 LexData.setDatabasePath(getApplicationContext(), fullpath.substring(0, fullpath.lastIndexOf(File.separator)));
             }
 

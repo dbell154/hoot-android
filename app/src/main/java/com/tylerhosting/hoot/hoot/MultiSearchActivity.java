@@ -1596,18 +1596,18 @@ public class MultiSearchActivity extends AppCompatActivity implements PopupMenu.
             LexData.setDatabasePath(getApplicationContext(), "");
             databaseAccess = DatabaseAccess.getInstance(getApplicationContext(), LexData.getDatabasePath(), LexData.getDatabase());
 
-            if (databaseAccess.getVersion() < LexData.getCurrentVersion(this))
-//            {
-////                startUpdateMessage();
-//                updateDatabase();
-//                LexData.setCurrentVersion(this, databaseAccess.getVersion());
-//
-//
 //            if (databaseAccess.getVersion() < LexData.CURRENT_VERSION)
-                Toast.makeText(this, "There is an updated database; restart Hoot to use it.", Toast.LENGTH_LONG).show();
+////            {
+//////                startUpdateMessage();
+////                updateDatabase();
+////                LexData.setCurrentVersion(this, databaseAccess.getVersion());
+////
+////
+////            if (databaseAccess.getVersion() < LexData.CURRENT_VERSION)
+//                Toast.makeText(this, "There is an updated database; restart Hoot to use it.", Toast.LENGTH_LONG).show();
         }
         else {
-            LexData.setDatabase(getApplicationContext(), fullpath.substring(fullpath.lastIndexOf(File.separator)));
+            LexData.setDatabase(fullpath.substring(fullpath.lastIndexOf(File.separator)));
             LexData.setDatabasePath(getApplicationContext(), fullpath.substring(0, fullpath.lastIndexOf(File.separator)));
         }
         databaseAccess = DatabaseAccess.getInstance(getApplicationContext(), LexData.getDatabasePath(), LexData.getDatabase());

@@ -1,30 +1,22 @@
 package com.tylerhosting.hoot.hoot;
 
-import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
-import android.os.Bundle;
 import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.util.Log;
-import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.Toast;
 
 import java.io.File;
-import java.text.DateFormat;
-import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
-import java.util.Properties;
+import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 import static android.os.Environment.DIRECTORY_DOCUMENTS;
 import static com.tylerhosting.hoot.hoot.Hoot.context;
 import static com.tylerhosting.hoot.hoot.Hoot.getAppContext;
-import static com.tylerhosting.hoot.hoot.Utils.setNewTheme;
 import static com.tylerhosting.hoot.hoot.Utils.usingLegacy;
 
 public class CardUtils
@@ -36,7 +28,7 @@ public class CardUtils
         public static boolean createCardFolder() {
             // create folders
             File full = new File(LexData.getCardfile()); // includes database name
-            File directory = new File(full.getParent()); // path only
+            File directory = new File(Objects.requireNonNull(full.getParent())); // path only
 
             if (directory.exists())
                 return true;
@@ -54,7 +46,7 @@ public class CardUtils
             back,
             forward,
             zero
-        };
+        }
 
         // gets just the path to the program
         public static String programData(String program) {
@@ -70,11 +62,10 @@ public class CardUtils
                 prefs.putString("cardlocaiton", "Internal");
                 prefs.apply();
                 LexData.setCardfile("Internal");
-                Toast.makeText(getAppContext(), "Cards set to Internal for Storage Access Framework", Toast.LENGTH_LONG);
+                Toast.makeText(getAppContext(), "Cards set to Internal for Storage Access Framework", Toast.LENGTH_LONG).show();
             }
 
 
-            String folder = "";
             String BasePath;
             if (Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT)
                 BasePath = Environment.getExternalStoragePublicDirectory("Documents").toString();
@@ -83,7 +74,7 @@ public class CardUtils
 //            String CardPath
 
 
-            folder = BasePath + "/Cards";
+            String folder = BasePath + "/Cards";
 
 
             if (LexData.getCardslocation().equals("Internal")) {
@@ -188,7 +179,7 @@ folder = Environment.
                 case 9: nextday = today.AddDays(270); break;
                 default: nextday = today.AddDays(480); break;*/
             }
-            return (int)unixDate(nextday);
+            return unixDate(nextday);
         }
 
         // Date to unix
@@ -200,8 +191,7 @@ folder = Environment.
         // unix to Date
         public static Date dtDate(int unix) {
             unix = (unix / 86400) * 86400;
-            Date conversion =new Date((long)unix*1000);
-            return conversion;
+            return new Date((long)unix*1000);
         }
 
         public static String dtDateStr(int unix) {

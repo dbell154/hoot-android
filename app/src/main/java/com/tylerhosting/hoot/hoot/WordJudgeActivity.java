@@ -76,7 +76,7 @@ public class WordJudgeActivity extends AppCompatActivity {
         else {
 //            db = full.substring(full.lastIndexOf(File.separator));
 //            Log.i("ExtDatabase", db);
-            LexData.setDatabase(getApplicationContext(), full.substring(full.lastIndexOf(File.separator)));
+            LexData.setDatabase(full.substring(full.lastIndexOf(File.separator)));
             LexData.setDatabasePath(getApplicationContext(), full.substring(0, full.lastIndexOf(File.separator)));
         }
         databaseAccess = DatabaseAccess.getInstance(getApplicationContext() , LexData.getDatabasePath(), LexData.getDatabase());

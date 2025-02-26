@@ -267,7 +267,7 @@ public class SearchActivity extends AppCompatActivity implements PopupMenu.OnMen
         }
         // set database lexdata to saved path
         else {
-            LexData.setDatabase(getApplicationContext(), fullpath.substring(fullpath.lastIndexOf(File.separator)));
+            LexData.setDatabase(fullpath.substring(fullpath.lastIndexOf(File.separator)));
             LexData.setDatabasePath(getApplicationContext(), fullpath.substring(0, fullpath.lastIndexOf(File.separator)));
             Toast.makeText(this, "You are using an alternate database,\r\n" +
                     " To use the distributed database select internal database aHoot.db3 in Settings", Toast.LENGTH_LONG).show();
@@ -275,8 +275,8 @@ public class SearchActivity extends AppCompatActivity implements PopupMenu.OnMen
         // set database instance based on lexdata
         databaseAccess = DatabaseAccess.getInstance(getApplicationContext(), LexData.getDatabasePath(), LexData.getDatabase());
 
-        if (databaseAccess.getVersion() < LexData.getCurrentVersion(this))
-            Toast.makeText(this, "There is an updated database; restart Hoot to use it.", Toast.LENGTH_LONG).show();
+//        if (databaseAccess.getVersion() < LexData.CURRENT_VERSION)
+//            Toast.makeText(this, "There is an updated database; restart Hoot to use it.", Toast.LENGTH_LONG).show();
 
         // makes sure database has tblLexicons
         if (!databaseAccess.isValidDatabase()) {
@@ -349,16 +349,16 @@ public class SearchActivity extends AppCompatActivity implements PopupMenu.OnMen
         if (fullpath.equals("Internal") || !fullpath.contains(File.separator))  {
             Flavoring.addflavoring(getApplicationContext()); // sets database
             LexData.setDatabasePath(getApplicationContext(), "");
+            if (databaseAccess.getVersion() < LexData.CURRENT_VERSION)
+                Toast.makeText(this, "There is an updated database; restart Hoot to use it.", Toast.LENGTH_LONG).show();
         }
         else {
-            LexData.setDatabase(getApplicationContext(), fullpath.substring(fullpath.lastIndexOf(File.separator)));
+            LexData.setDatabase(fullpath.substring(fullpath.lastIndexOf(File.separator)));
             LexData.setDatabasePath(getApplicationContext(), fullpath.substring(0, fullpath.lastIndexOf(File.separator)));
         }
 
         databaseAccess = DatabaseAccess.getInstance(getApplicationContext(), LexData.getDatabasePath(), LexData.getDatabase());
 
-        if (databaseAccess.getVersion() < LexData.getCurrentVersion(this))
-            Toast.makeText(this, "There is an updated database; restart Hoot to use it.", Toast.LENGTH_LONG).show();
 
 
 
@@ -2260,7 +2260,7 @@ public class SearchActivity extends AppCompatActivity implements PopupMenu.OnMen
         }
 
 //        if (specStatus.getVisibility() == VISIBLE)
-            generateSpecStats();
+        generateSpecStats();
 
         if (LexData.getMaxList() > 0) {
             if (cursor.getCount() == LexData.getMaxList())
@@ -2271,14 +2271,7 @@ public class SearchActivity extends AppCompatActivity implements PopupMenu.OnMen
         else
             displayResults();
 
-
-//        if (etTerm.length() > 0)
-            etTerm.setSelection(cursorPosition);
-        // etTerm.setSelection(etTerm.getText().length());
-
-
-//leaked
-//        x//        databaseAccess.close(); // closing database while async was still running caused connection pool closed
+        etTerm.setSelection(cursorPosition);
     }
     public void doSearch2(View view) {
         executeSearch();
@@ -2306,20 +2299,9 @@ public class SearchActivity extends AppCompatActivity implements PopupMenu.OnMen
         }
 
         String filters = makefilters(searchType);
-        String filterDesc = makeDesc();
-//
-//        ordering = getSortOrder();
-//        limits = Utils.limitStringer(limit,offset);
-//        Log.d("getCursor", limits);
 
         int least = minimum.getSelectedItemPosition() + 1;
         int most = maximum.getSelectedItemPosition() + 1;
-
-/*        if (most == 1) { // Any
-            most = LexData.getMaxLength();
-            maximum.setSelection(most - 1); //
-        }
-*/
 
         if (least > most && most != 1) {
             incompleteSearch("Maximum length can't be less than minimum.");
@@ -2333,7 +2315,6 @@ public class SearchActivity extends AppCompatActivity implements PopupMenu.OnMen
 
 
         // todo get from control, method
-//        databaseAccess.open(); // opened in execute search
         switch (searchType) {
             case 0: // anagrams and blank anagrams
                 if (term.trim().length() > 1) {

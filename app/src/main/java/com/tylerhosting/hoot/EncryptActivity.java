@@ -1,17 +1,9 @@
 package com.tylerhosting.hoot;
 
-import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.tylerhosting.hoot.hoot.R;
-
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-
-import javax.crypto.KeyGenerator;
-import javax.crypto.SecretKey;
 
 public class EncryptActivity extends AppCompatActivity {
 

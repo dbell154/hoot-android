@@ -1,17 +1,13 @@
 package com.tylerhosting.hoot.hoot;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
 import java.io.File;
-import java.math.BigDecimal;
-import java.util.Arrays;
+import java.util.Objects;
 
-import static com.tylerhosting.hoot.hoot.CardUtils.lexiconData;
 import static com.tylerhosting.hoot.hoot.CardUtils.programData;
 
 public class LexData {
@@ -48,23 +44,6 @@ public class LexData {
     }
 
     public static int CURRENT_VERSION = 18; // Change here and NEW_DB_VERSION in SplashActivity
-    public static int getCurrentVersion(Context context) {
-        SharedPreferences shared = PreferenceManager.getDefaultSharedPreferences(context.getApplicationContext());
-        int version = shared.getInt("version", CURRENT_VERSION);
-        return version;
-    }
-
-    public static void setCurrentVersion(Context context, int version) {
-        SharedPreferences shared = PreferenceManager.getDefaultSharedPreferences(context.getApplicationContext());
-        SharedPreferences.Editor prefs = shared.edit();
-        prefs.putInt("version", version);
-        prefs.apply();
-    }
-
-    private static boolean multiHelpShown = false;
-    public static void setMultiHelpShown(boolean shown) { multiHelpShown = shown; }
-    public static boolean getMultiHelpShown() { return multiHelpShown; }
-
 
     private static boolean showCondensed = true;
     public static void setShowCondensed(boolean condensed) { showCondensed = condensed; }
@@ -135,7 +114,7 @@ public class LexData {
     public static String getDatabasePath() { return databasePath; }
     public static void setDatabasePath(Context context, String databasePath) {
         LexData.databasePath = databasePath;
-        if (databasePath == "" || databasePath == null)
+        if (Objects.equals(databasePath, "") || databasePath == null)
             LexData.databasePath = context.getApplicationContext().getApplicationInfo().dataDir + "/databases";
     }
     // work around to get getFilesDir for app without context
@@ -145,9 +124,9 @@ public class LexData {
     private static String database = Flavoring.getflavoring();
 
     public static String getDatabase() { return database; }
-    public static void setDatabase (Context context, String database) {
-        LexData.database = database;
-    }
+//    public static void setDatabase (Context context, String database) {
+//        LexData.database = database;
+//    }
     public static void setDatabase(String database) {
         LexData.database = database;
     }
@@ -256,8 +235,8 @@ public class LexData {
     }
     public static class ZWord    {
         public String question;
-        public String getQuestion() { return question; }
-        public void setQuestion(String question) { this.question = question; }
+//        public String getQuestion() { return question; }
+//        public void setQuestion(String question) { this.question = question; }
 
         public int cardbox;
         public int getCardbox() { return cardbox; }
@@ -270,7 +249,7 @@ public class LexData {
         public int last_correct;
         public int difficulty;
         public int next_scheduled;
-        public int date_added;
+//        public int date_added;
     }
     public static class HList    {
         public int id;
@@ -405,68 +384,68 @@ public static class GlobalWord {
     }
     public static String valueSet(int value)
     {
-        String valueString  = "[";
+        StringBuilder valueString  = new StringBuilder("[");
         for (int n = 0; n < 27; n++)
         {
             if (Tiles.tiles.charvalue[n] == value)
             {
                 char ascii = (char)(n + 'A');
-                valueString += ascii;
+                valueString.append(ascii);
             }
         }
-        if (valueString == "[")
-            valueString = "@";
+        if (valueString.toString().equals("["))
+            valueString = new StringBuilder("@");
         else
-            valueString += "]";
-        return valueString;
+            valueString.append("]");
+        return valueString.toString();
     }
     public static String valueSet(int from, int to)
     {
-        String valueString  = "[";
+        StringBuilder valueString  = new StringBuilder("[");
         for (int n = 0; n < 27; n++)
         {
             if (Tiles.tiles.charvalue[n] >= from && Tiles.tiles.charvalue[n] <= to)
             {
                 char ascii = (char)(n + 'A');
-                valueString += ascii;
+                valueString.append(ascii);
             }
         }
-        if (valueString == "[")
-            valueString = "@";
+        if (valueString.toString().equals("["))
+            valueString = new StringBuilder("@");
         else
-            valueString += "]";
-        return valueString;
+            valueString.append("]");
+        return valueString.toString();
     }
     public static String valueLetters(int from, int to)
     {
-        String valueString  = "";
+        StringBuilder valueString  = new StringBuilder();
         for (int n = 0; n < 27; n++)
         {
             if (Tiles.tiles.charvalue[n] >= from && Tiles.tiles.charvalue[n] <= to)
             {
                 char ascii = (char)(n + 'A');
-                valueString += ascii;
+                valueString.append(ascii);
             }
         }
-        if (valueString == "")
-            valueString = "@";
-        return valueString;
+        if (valueString.toString().isEmpty())
+            valueString = new StringBuilder("@");
+        return valueString.toString();
     }
-    public static int[] tileFreq(){
-        Structures.TileFrequency tilefreq[];
-        tilefreq = new Structures.TileFrequency[26];
-
-        for (int i = 0; i < 26; i++)
-        {
-            tilefreq[i] = new Structures.TileFrequency(Tiles.tiles.chardist[i], i);
-        }
-        Arrays.sort(tilefreq);
-
-        int freqIndex[] = new int[26];
-        for (int i = 0; i < 26; i++)
-            freqIndex[i] = tilefreq[i].letter;
-        return freqIndex;
-    }
+//    public static int[] tileFreq(){
+//        Structures.TileFrequency tilefreq[];
+//        tilefreq = new Structures.TileFrequency[26];
+//
+//        for (int i = 0; i < 26; i++)
+//        {
+//            tilefreq[i] = new Structures.TileFrequency(Tiles.tiles.chardist[i], i);
+//        }
+//        Arrays.sort(tilefreq);
+//
+//        int freqIndex[] = new int[26];
+//        for (int i = 0; i < 26; i++)
+//            freqIndex[i] = tilefreq[i].letter;
+//        return freqIndex;
+//    }
     public static class Tiles {
         /// <summary> Globally available tile set </summary>
         public static Structures.TileSet tiles;
@@ -489,12 +468,6 @@ public static class GlobalWord {
             // CAUTION: INDEXING DIFFERS FROM PC VERSION
             switch (set)
             {
-                default:
-                case 0:
-                    int[] set1char =  { 9, 2, 2, 4, 12, 2, 3, 2, 9, 1, 1, 4, 2, 6, 8, 2, 1, 6, 4, 6, 4, 2, 2, 1, 2, 1,  2 };
-                    int[] set1value = { 1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10,  0 };
-                    tiles = new Structures.TileSet(1, setName[0], set1char, set1value, 100);
-                    break;
                 case 1:
                     int[] set2char =  { 9, 2, 2, 5, 13, 2, 3, 4, 8, 1, 1, 4, 2, 5, 8, 2, 1, 6, 5, 7, 4, 2, 2, 1, 2, 1,  2 };
                     int[] set2value = { 1, 4, 4, 2, 1, 4, 3, 3, 1, 10, 5, 2, 4, 2, 1, 4, 10, 1, 1, 1, 2, 5, 4, 8, 3, 10,  0 };
@@ -543,6 +516,12 @@ public static class GlobalWord {
                     int[] set9char = { 14, 3, 6, 3, 11, 3, 2, 2, 12, 0, 0, 5, 5, 5, 15, 3, 1,  6, 6, 6, 5, 3, 0, 0, 0, 2,  2 };
                     int[] set9value = { 1, 5, 2, 5, 1,  5, 8, 8,  1, 0, 0, 3, 3, 3, 1,  5, 10, 2, 2, 2, 3, 5, 0, 0, 0, 8,  0 };
                     tiles = new Structures.TileSet(set, setName[set - 1], set9char, set9value, 120);
+                    break;
+                case 0:
+                default:
+                    int[] set1char =  { 9, 2, 2, 4, 12, 2, 3, 2, 9, 1, 1, 4, 2, 6, 8, 2, 1, 6, 4, 6, 4, 2, 2, 1, 2, 1,  2 };
+                    int[] set1value = { 1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10,  0 };
+                    tiles = new Structures.TileSet(1, setName[0], set1char, set1value, 100);
                     break;
                 // see http://tiger2002crossword.blogspot.com/p/wordsmith.html
             }
@@ -724,40 +703,40 @@ public static class GlobalWord {
 //            "Semordnilaps",
     public static String[] sortby = {
             "Sort By:",
-            "\u2191Length",
-            "\u2193Length",
-            "\u2191Word",
-            "\u2193Word",
-            "\u2191Score",
-            "\u2193Score",
-            "\u2191Probability",
-            "\u2193Probability",
-            "\u2191Playability",
-            "\u2193Playability",
-            "\u2191Anagrams",
-            "\u2193Anagrams",
-        "\u2191Alphagram",
-        "\u2193Alphagram",
-        "\u21C5Random" //,
-//        "\u2191Unsorted"
+            "↑Length",
+            "↓Length",
+            "↑Word",
+            "↓Word",
+            "↑Score",
+            "↓Score",
+            "↑Probability",
+            "↓Probability",
+            "↑Playability",
+            "↓Playability",
+            "↑Anagrams",
+            "↓Anagrams",
+        "↑Alphagram",
+        "↓Alphagram",
+        "⇅Random" //,
+//        "↑Unsorted"
     };
     public static String[] thenby = {
             "Then By:",
-            "\u2191Word",
-            "\u2193Word",
-            "\u2191Score",
-            "\u2193Score",
-            "\u2191Probability",
-            "\u2193Probability",
-            "\u2191Playability",
-            "\u2193Playability",
-            "\u2191Anagrams",
-            "\u2193Anagrams",
-            "\u2191Length",
-            "\u2193Length",
-            "\u2191Alphagram",
-            "\u2193Alphagram",
-            "\u21C5Random"
+            "↑Word",
+            "↓Word",
+            "↑Score",
+            "↓Score",
+            "↑Probability",
+            "↓Probability",
+            "↑Playability",
+            "↓Playability",
+            "↑Anagrams",
+            "↓Anagrams",
+            "↑Length",
+            "↓Length",
+            "↑Alphagram",
+            "↓Alphagram",
+            "⇅Random"
     };
 
     public static String[] cardtypes = {
@@ -774,10 +753,10 @@ public static class GlobalWord {
             "Blank Anagrams"
     };
 
-    public static String[] tilecolors = {
-            "red", "blue", "green", "cyan", "magenta",
-            "yellow", "aqua", "fuchsia", "lime", "maroon",
-            "navy", "olive", "purple", "teal"
-    };
+//    public static String[] tilecolors = {
+//            "red", "blue", "green", "cyan", "magenta",
+//            "yellow", "aqua", "fuchsia", "lime", "maroon",
+//            "navy", "olive", "purple", "teal"
+//    };
     
 }

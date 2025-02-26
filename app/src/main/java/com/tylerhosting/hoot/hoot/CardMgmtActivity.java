@@ -1,13 +1,9 @@
 package com.tylerhosting.hoot.hoot;
 
-import static android.view.View.GONE;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.database.Cursor;
-import android.database.MatrixCursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.inputmethodservice.Keyboard;
@@ -31,17 +27,14 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 public class CardMgmtActivity extends AppCompatActivity {
 
     CardDatabase cardDatabase;
-    private SQLiteDatabase cards;
     TextView listtype, cardboxlexicon;
     Spinner cardtype, cardlist;
     RelativeLayout cardlistlayout;
@@ -119,7 +112,7 @@ public class CardMgmtActivity extends AppCompatActivity {
         }
     };
 
-    private boolean deleteAlert() {
+    private void deleteAlert() {
         final AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.darkAlertDialog);
 
         builder.setTitle("Are you sure?" );
@@ -143,7 +136,6 @@ public class CardMgmtActivity extends AppCompatActivity {
         });
         AlertDialog dialog = builder.create();
         dialog.show();
-        return true;
 
     }
     private void beginDeletions() {
@@ -206,7 +198,7 @@ public class CardMgmtActivity extends AppCompatActivity {
             cardlist.setSelection(lastList);
         }
 
-        if (themeName == "Dark Theme") {
+        if (Objects.equals(themeName, "Dark Theme")) {
             cardtype.setBackgroundColor(Color.BLACK);
             cardlist.setBackgroundColor(Color.BLACK);
         }
@@ -275,7 +267,7 @@ public class CardMgmtActivity extends AppCompatActivity {
             List<String> listTitles = new ArrayList<>();
 
             cardDatabase = new CardDatabase(this, LexData.getCardfile(), null, 2);
-            cards = cardDatabase.getWritableDatabase();
+            SQLiteDatabase cards = cardDatabase.getWritableDatabase();
 
             // sort by order added to database
             sql =       "SELECT ListCardTitle from tblList order by ListCardID";
@@ -285,6 +277,7 @@ public class CardMgmtActivity extends AppCompatActivity {
             while (cursor.moveToNext()) {
                 listTitles.add(cursor.getString(index));
             }
+            cursor.close();
 
             listAdapter = new ArrayAdapter<String>(this, R.layout.spinselection, listTitles);
             //listAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listTitles);

@@ -6,7 +6,7 @@ public class Flavoring {
     public void Flavoring(){}
     private static String flavor = "aCommon.db3";
     public static void addflavoring(Context context){
-        LexData.setDatabase(context, flavor);
+        LexData.setDatabase(flavor);
     }
     public static void addflavoring(){
         LexData.setDatabase(flavor);
