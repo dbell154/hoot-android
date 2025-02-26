@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tylerhosting.hoot.hoot.CardBoxActivity">
+
+
+    <Button
+        android:id="@+id/positioner2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/blue"
+        android:text="Button"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/searchType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CardBoxes"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/CardItems"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/keyboardview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mergeIntoBox"
+        tools:visibility="invisible" />
+
+    <CheckBox
+        android:id="@+id/chkFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="10dp"
+        android:text="Filter"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/CardItems"
+        app:layout_constraintEnd_toStartOf="@+id/searchType"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CardBoxes" />
+
+    <Spinner
+        android:id="@+id/searchType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="4dp"
+        android:gravity="bottom"
+        android:padding="3dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@id/etEntry2"
+        app:layout_constraintEnd_toStartOf="@id/minLength"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/chkFilter"
+        app:layout_constraintTop_toBottomOf="@id/CardBoxes"
+        app:layout_constraintWidth_percent=".47" />
+
+    <Spinner
+        android:id="@+id/minLength"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:padding="3dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/searchType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/searchType"
+        app:layout_constraintTop_toTopOf="@id/searchType" />
+
+
+    <EditText
+        android:id="@+id/etEntry2"
+        style="@android:style/Widget.EditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/background_light"
+
+        android:digits="cvABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789*@?.,^+[]&lt;&gt;(|){}\\~-"
+        android:hint="@string/searchterm"
+        android:imeOptions="actionSearch|flagForceAscii"
+        android:inputType="textCapCharacters|textNoSuggestions"
+        android:paddingStart="8dp"
+        android:paddingLeft="8dp"
+        android:paddingEnd="2dp"
+        android:paddingRight="2dp"
+        android:singleLine="false"
+        android:textColor="@color/darkText"
+        android:textColorHighlight="@android:color/holo_blue_dark"
+        android:textSize="18sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@id/CardItems"
+        app:layout_constraintEnd_toStartOf="@id/maxLength"
+        app:layout_constraintStart_toEndOf="@id/chkFilter"
+        app:layout_constraintTop_toBottomOf="@id/searchType"
+        app:layout_constraintWidth_percent=".47"
+        tools:background="@android:color/transparent"
+        tools:hint="Search Term"
+        tools:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/tvImportFile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="8dp"
+        android:background="#FFFFFF"
+        android:gravity="right"
+        android:paddingStart="8dp"
+        android:paddingLeft="3dp"
+        android:paddingEnd="2dp"
+        android:paddingRight="2dp"
+        android:singleLine="true"
+
+        android:text="File specification"
+        android:textColor="@color/blackText"
+        android:textSize="12sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/CardItems"
+        app:layout_constraintEnd_toStartOf="@id/maxLength"
+        app:layout_constraintStart_toEndOf="@id/chkFilter"
+        app:layout_constraintTop_toBottomOf="@id/searchType"
+        app:layout_constraintWidth_percent=".47"
+        tools:visibility="visible" />
+
+
+    <Spinner
+        android:id="@+id/maxLength"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:padding="3dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/CardItems"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/etEntry2"
+        app:layout_constraintTop_toTopOf="@id/etEntry2" />
+
+    <DatePicker
+        android:id="@+id/DateStart"
+        android:layout_width="0dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="64dp"
+        android:calendarViewShown="false"
+        android:clickable="false"
+        android:datePickerMode="spinner"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/positioner"
+        app:layout_constraintEnd_toEndOf="@id/ListName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ListName" />
+
+    <TextView
+        android:id="@+id/DeleteList"
+        android:layout_width="0dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="right|top"
+        android:text="@string/delete_list"
+        android:textSize="12sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@id/ListName"
+        app:layout_constraintStart_toEndOf="@+id/lqtype"
+        app:layout_constraintTop_toBottomOf="@id/ListName"
+        tools:visibility="visible" />
+
+    <!--    <Spinner-->
+    <!--        android:id="@+id/CardType"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="32dp"-->
+    <!--        android:layout_marginLeft="32dp"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:layout_marginEnd="8dp"-->
+    <!--        android:layout_marginRight="8dp"-->
+    <!--        app:layout_constraintEnd_toStartOf="@+id/btnBeginQuiz"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/cardboxtitle" />-->
+
+    <TextView
+        android:id="@+id/deleteCardbox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="right|top"
+        android:text="Delete Cardbox"
+        android:textSize="12sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@id/CardType"
+        app:layout_constraintStart_toEndOf="@+id/lqtype"
+        app:layout_constraintTop_toBottomOf="@id/CardType"
+        tools:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/CardType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_weight=".28"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/btnBeginQuiz"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardboxtitle">
+
+        <Spinner
+            android:id="@+id/CardTypeSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:spinnerMode="dropdown" />
+
+        <ImageView
+            android:id="@+id/ddarrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:padding="0dp"
+            app:srcCompat="@drawable/ic_arrow_dropdown_18" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/CardBoxes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="12dp"
+        android:fastScrollAlwaysVisible="true"
+        android:fastScrollEnabled="true"
+        android:paddingRight="8dp"
+        android:scrollbarStyle="outsideOverlay"
+        app:layout_constraintBottom_toTopOf="@id/mergeIntoBox"
+        app:layout_constraintEnd_toStartOf="@id/CardSchedule"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/positioner" >
+
+    </ListView>
+
+    <ListView
+        android:id="@+id/CardSchedule"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="12dp"
+        android:fastScrollAlwaysVisible="true"
+        android:fastScrollEnabled="true"
+        android:paddingRight="8dp"
+        android:scrollbarStyle="outsideOverlay"
+        app:layout_constraintBottom_toTopOf="@id/mergeIntoBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/CardBoxes"
+        app:layout_constraintTop_toBottomOf="@+id/positioner" />
+
+    <Button
+        android:id="@+id/btnBeginQuiz"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:fontFamily="sans-serif-condensed"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:text="Quiz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/chk0First"
+        android:layout_width="99dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:text="Cardbox Order"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/wordCount"
+        app:layout_constraintTop_toBottomOf="@id/btnReviewCards" />
+
+    <Button
+        android:id="@+id/positioner"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="8dp"
+        android:background="#FFC107"
+        android:text="Button"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/CardBoxes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/wordCount"
+        tools:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/ListName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/CardType"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CardType">
+
+        <Spinner
+            android:id="@+id/ListNameSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:spinnerMode="dropdown" />
+
+        <ImageView
+            android:id="@+id/ddarrow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:padding="0dp"
+            app:srcCompat="@drawable/ic_arrow_dropdown_18" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/cardboxtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center_horizontal"
+        android:text="Select Cardbox"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/CardType"
+        app:layout_constraintEnd_toStartOf="@+id/btnBeginQuiz"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardboxlexicon" />
+
+    <EditText
+        android:id="@+id/wordCount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:inputType="number|textNoSuggestions"
+        android:text="100"
+
+        app:layout_constraintBottom_toTopOf="@+id/positioner"
+        app:layout_constraintEnd_toStartOf="@id/chk0First"
+        app:layout_constraintStart_toEndOf="@+id/wordCountText"
+        app:layout_constraintTop_toBottomOf="@+id/DateStart" />
+
+    <TextView
+        android:id="@+id/wordCountText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="bottom|right"
+        android:text="Number of questions"
+        app:layout_constraintBottom_toBottomOf="@+id/wordCount"
+        app:layout_constraintEnd_toStartOf="@+id/wordCount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DateStart" />
+
+    <Button
+        android:id="@+id/btnReviewCards"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:fontFamily="sans-serif-condensed"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:text="Review"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btnBeginQuiz"
+        app:layout_constraintTop_toBottomOf="@+id/btnBeginQuiz" />
+
+    <TextView
+        android:id="@+id/lqtype"
+        android:layout_width="0dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="64dp"
+        android:gravity="top"
+        android:paddingLeft="8dp"
+        android:text="Quiz Type"
+        android:textColor="#808080"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/positioner"
+        app:layout_constraintEnd_toStartOf="@id/DeleteList"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ListName"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/mergeIntoBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Merge"
+        android:textSize="12sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@id/CardItems"
+        app:layout_constraintEnd_toStartOf="@+id/deleteList"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CardBoxes"
+        tools:visibility="gone" />
+
+
+    <CheckBox
+        android:id="@+id/deleteList"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="8dp"
+        android:text="Delete List\n when done"
+        android:textSize="12sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/mergeIntoBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/mergeIntoBox"
+        app:layout_constraintTop_toBottomOf="@+id/CardBoxes"
+        tools:visibility="gone" />
+
+    <android.inputmethodservice.KeyboardView
+        android:id="@+id/keyboardview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/cardboxlexicon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center|top"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/cardboxtitle"
+        app:layout_constraintStart_toStartOf="@+id/cardboxtitle"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Lexicon" />
+
+    <CheckBox
+        android:id="@+id/chkRandom"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:text="Randomize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/wordCount"
+        app:layout_constraintTop_toBottomOf="@+id/chk0First" />
+
+    <TextView
+        android:id="@+id/cardboxhelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        android:focusable="auto"
+        android:text="@string/help"
+        android:textColor="#80233C87"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

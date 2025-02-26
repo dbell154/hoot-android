@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <item>
+
+            <layer-list>
+
+                <item>
+                    <color
+                        android:color="@android:color/black"/>
+                </item>
+
+                <item>
+                    <bitmap
+                        android:gravity="center_vertical|right"
+                        app:srcCompat="@drawable/ic_arrow_dropdown_18" />
+                </item>
+
+            </layer-list>
+
+        </item>
+
+</selector>

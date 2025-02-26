@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/judge"
+        android:textSize="18sp"
+        android:actionLayout="@layout/spinitem"
+        android:title="Judge" />
+    <item android:id="@+id/lookup"
+        android:title="Lookup" />
+</menu>

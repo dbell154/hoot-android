@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".ToolsActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="16dp"
+        android:background="@color/colorPrimary"
+
+        android:fadeScrollbars="false"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbars="vertical"
+        tools:context="com.tylerhosting.hoot.hoot.ToolsActivity">
+
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.06" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.48" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.52" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.94" />
+
+        <TextView
+            android:id="@+id/toolstitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/tools"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/txtCardboxes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Cardboxes"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toStartOf="@+id/guideline6"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toBottomOf="@id/btnToolsGuide" />
+
+
+        <Button
+            android:id="@+id/btnCopy1924Cards"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:paddingLeft="2dp"
+            android:paddingTop="6dp"
+            android:paddingRight="2dp"
+            android:paddingBottom="6dp"
+            android:text="Copy CSW19 cards to CSW24"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline6"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toBottomOf="@+id/txtCardboxes" />
+
+        <Button
+            android:id="@+id/btnToolsGuide"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:paddingLeft="2dp"
+            android:paddingTop="6dp"
+            android:paddingRight="2dp"
+            android:paddingBottom="6dp"
+            android:text="Tools Guide"
+            android:onClick="toolguide"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline6"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toBottomOf="@id/toolstitle" />
+
+        <Button
+            android:id="@+id/btnCopy2224Cards"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:paddingLeft="2dp"
+            android:paddingTop="6dp"
+            android:paddingRight="2dp"
+            android:paddingBottom="6dp"
+            android:text="Copy CSW22 cards to CSW24"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline6"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toBottomOf="@+id/btnCopy1924Cards" />
+
+        <Button
+            android:id="@+id/btnCopy2324Cards"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:paddingLeft="2dp"
+            android:paddingTop="6dp"
+            android:paddingRight="2dp"
+            android:paddingBottom="6dp"
+            android:text="Copy NWL23 cards to CSW24"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline6"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toBottomOf="@+id/btnCopy2224Cards" />
+
+        <Button
+            android:id="@+id/btnCopyNWLCards"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:paddingLeft="2dp"
+            android:paddingTop="6dp"
+            android:paddingRight="2dp"
+            android:paddingBottom="6dp"
+            android:text="Copy NWL20 cards to NWL23"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline6"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toBottomOf="@+id/btnCopy2324Cards" />
+
+        <Button
+            android:id="@+id/btnCopyWOWCards"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:paddingLeft="2dp"
+            android:paddingTop="6dp"
+            android:paddingRight="2dp"
+            android:paddingBottom="6dp"
+            android:text="Copy NWL18 cards to WOW24"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline6"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toBottomOf="@id/btnCopyNWLCards" />
+
+        <Button
+            android:id="@+id/btnImportCardbox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:paddingLeft="2dp"
+            android:paddingTop="6dp"
+            android:paddingRight="2dp"
+            android:paddingBottom="6dp"
+            android:text="Import cardbox to current lexicon"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline6"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toBottomOf="@id/btnCopyWOWCards" />
+
+
+        <TextView
+            android:id="@+id/txtSubjectLists"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Subject Lists"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toStartOf="@+id/toolstitle"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toBottomOf="@id/btnImportCardbox" />
+
+
+
+        <Button
+            android:id="@+id/btnImportList"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:onClick="importList"
+            android:paddingLeft="2dp"
+            android:paddingTop="6dp"
+            android:paddingRight="2dp"
+            android:paddingBottom="6dp"
+            android:text="Import Subject List"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline6"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toBottomOf="@id/txtSubjectLists" />
+
+        <Button
+            android:id="@+id/btnDeleteList"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:onClick="importList"
+            android:paddingLeft="2dp"
+            android:paddingTop="6dp"
+            android:paddingRight="2dp"
+            android:paddingBottom="6dp"
+            android:text="Delete Subject List"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline6"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toBottomOf="@id/btnImportList" />
+
+        <Button
+            android:id="@+id/btnExportList"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:onClick="importList"
+            android:paddingLeft="2dp"
+            android:paddingTop="6dp"
+            android:paddingRight="2dp"
+            android:paddingBottom="6dp"
+            android:text="Export Subject List"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline6"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toBottomOf="@id/btnDeleteList" />
+
+
+        <TextView
+            android:id="@+id/txtLexicons"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Lexicons"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toStartOf="@+id/guideline13"
+            app:layout_constraintStart_toStartOf="@+id/guideline12"
+            app:layout_constraintTop_toBottomOf="@id/toolstitle" />
+
+
+        <Button
+            android:id="@+id/btnImportAct"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:onClick="importAct"
+            android:paddingLeft="2dp"
+            android:paddingTop="6dp"
+            android:paddingRight="2dp"
+            android:paddingBottom="6dp"
+            android:text="@string/import_lexicon_beta"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@id/guideline13"
+            app:layout_constraintStart_toStartOf="@id/guideline12"
+            app:layout_constraintTop_toBottomOf="@id/txtLexicons" />
+
+
+        <Button
+            android:id="@+id/btnUseLexicon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:onClick="useLexicon"
+            android:paddingLeft="2dp"
+            android:paddingTop="6dp"
+            android:paddingRight="2dp"
+            android:paddingBottom="6dp"
+            android:text="Select Lexicon"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@id/guideline13"
+            app:layout_constraintStart_toStartOf="@id/guideline12"
+            app:layout_constraintTop_toBottomOf="@id/btnImportAct"
+            tools:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnDeleteLexicon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:text="Delete Lexicon"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@id/guideline13"
+            app:layout_constraintStart_toStartOf="@id/guideline12"
+            app:layout_constraintTop_toBottomOf="@id/btnUseLexicon" />
+
+
+
+        <Button
+            android:id="@+id/btnExportLexicon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:paddingLeft="2dp"
+            android:paddingTop="6dp"
+            android:paddingRight="2dp"
+            android:paddingBottom="6dp"
+            android:text="Export Lexicon"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@id/guideline13"
+            app:layout_constraintStart_toStartOf="@id/guideline12"
+            app:layout_constraintTop_toBottomOf="@id/btnDeleteLexicon"
+            tools:visibility="gone" />
+
+
+
+
+        <Button
+            android:id="@+id/btnCompactDatabase"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:paddingLeft="2dp"
+            android:paddingTop="6dp"
+            android:paddingRight="2dp"
+            android:paddingBottom="6dp"
+            android:text="Compact Database"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@id/guideline13"
+            app:layout_constraintStart_toStartOf="@id/guideline12"
+            app:layout_constraintTop_toBottomOf="@id/btnExportLexicon"
+            tools:visibility="gone" />
+
+        <TextView
+            android:id="@+id/a11Message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:background="#F3EFEF"
+            android:padding="5dp"
+            android:text="Note: The following tools may not work in some devices running Android 11 or later"
+            android:textAllCaps="false"
+            android:textColor="#656565"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/guideline13"
+            app:layout_constraintStart_toStartOf="@id/guideline12"
+            app:layout_constraintTop_toBottomOf="@id/btnCompactDatabase"
+            tools:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txtFileManagement"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:singleLine="false"
+            android:text="Database and File Management"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toStartOf="@+id/guideline13"
+            app:layout_constraintStart_toStartOf="@+id/guideline12"
+            app:layout_constraintTop_toBottomOf="@id/a11Message" />
+
+
+        <Button
+            android:id="@+id/btnBackupDB"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:paddingLeft="2dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="2dp"
+            android:paddingRight="6dp"
+            android:text="@string/backup_database"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline13"
+            app:layout_constraintStart_toStartOf="@+id/guideline12"
+            app:layout_constraintTop_toBottomOf="@id/txtFileManagement" />
+
+
+        <Button
+            android:id="@+id/btnDBUpdate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:paddingLeft="2dp"
+            android:paddingTop="6dp"
+            android:paddingRight="2dp"
+            android:paddingBottom="6dp"
+            android:text="Update Internal Database from Distribution"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@id/guideline13"
+            app:layout_constraintStart_toStartOf="@id/guideline12"
+            app:layout_constraintTop_toBottomOf="@id/btnBackupDB"
+            tools:visibility="visible" />
+
+        <Button
+            android:id="@+id/btnCopyAssetsDB"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:paddingLeft="2dp"
+            android:paddingTop="6dp"
+            android:paddingRight="2dp"
+            android:paddingBottom="6dp"
+            android:text="Copy Distribution Database to Documents"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@id/guideline13"
+            app:layout_constraintStart_toStartOf="@id/guideline12"
+            app:layout_constraintTop_toBottomOf="@id/btnDBUpdate" />
+
+        <Button
+            android:id="@+id/btnCopyInternalDB"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:paddingLeft="2dp"
+            android:paddingTop="6dp"
+            android:paddingRight="2dp"
+            android:paddingBottom="6dp"
+            android:text="Copy Internal Database to Documents"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@id/guideline13"
+            app:layout_constraintStart_toStartOf="@id/guideline12"
+            app:layout_constraintTop_toBottomOf="@id/btnCopyAssetsDB" />
+
+        <Button
+            android:id="@+id/btnImportDatabase"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:paddingLeft="2dp"
+            android:paddingTop="6dp"
+            android:paddingRight="2dp"
+            android:paddingBottom="6dp"
+            android:text="Import Database"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@id/guideline13"
+            app:layout_constraintStart_toStartOf="@id/guideline12"
+            app:layout_constraintTop_toBottomOf="@id/btnCopyInternalDB" />
+
+        <Button
+            android:id="@+id/btnCopySelectedFiles"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:paddingLeft="2dp"
+            android:paddingTop="6dp"
+            android:paddingRight="2dp"
+            android:paddingBottom="6dp"
+            android:text="Copy Selected Files to Documents"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@id/guideline13"
+            app:layout_constraintStart_toStartOf="@id/guideline12"
+            app:layout_constraintTop_toBottomOf="@id/btnImportDatabase" />
+
+
+        <Button
+            android:id="@+id/btnDeleteInternalFiles"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:paddingLeft="2dp"
+            android:paddingTop="6dp"
+            android:paddingRight="2dp"
+            android:paddingBottom="6dp"
+            android:text="Delete Internal Files"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@id/guideline13"
+            app:layout_constraintStart_toStartOf="@id/guideline12"
+            app:layout_constraintTop_toBottomOf="@id/btnCopySelectedFiles"
+            tools:visibility="visible" />
+
+
+        <Button
+            android:id="@+id/btnAddAlpha"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:onClick="addAlphagrams"
+            android:text="Add Alphagrams to old lexicon"
+            android:textAllCaps="false"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/guideline6"
+
+
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toBottomOf="@id/btnTimer" />
+
+        <Button
+            android:id="@+id/btnCardMgmt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:onClick="cardmgmt"
+            android:text="Card Management"
+            android:textAllCaps="false"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/guideline6"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toBottomOf="@id/btnTimer" />
+
+
+        <Button
+            android:id="@+id/btnAnalyze"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:onClick="noBA"
+            android:text="Analysis"
+            android:textAllCaps="false"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/guideline6"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toBottomOf="@id/btnCopyInternalDB" />
+
+        <Button
+            android:id="@+id/btnEncryption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:onClick="goEncryption"
+            android:text="Encryption"
+            android:textAllCaps="false"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/guideline6"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toBottomOf="@id/btnAnalyze" />
+
+        <EditText
+            android:id="@+id/analystlog"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="TextView"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/guideline6"
+            app:layout_constraintStart_toStartOf="@id/guideline5"
+            app:layout_constraintTop_toBottomOf="@id/btnAnalyze" />
+
+
+
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

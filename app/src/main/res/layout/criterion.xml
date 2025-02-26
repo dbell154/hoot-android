@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/critLine"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/critDelete"
+        android:layout_width="30dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:background="@color/lightblue"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:padding="0dp"
+        android:text="-"
+        android:textColor="#F44336"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/critSearchType"
+        app:layout_constraintEnd_toStartOf="@id/critNotBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/critSearchType" />
+
+    <CheckBox
+        android:id="@+id/critNotBox"
+        android:layout_width="0dp"
+        android:layout_height="16dp"
+        android:buttonTint="@color/whiteText"
+        android:gravity="left|center_vertical"
+        android:padding="0dp"
+        android:paddingBottom="5dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/critSearchType"
+        app:layout_constraintEnd_toStartOf="@id/critSearchType"
+        app:layout_constraintStart_toEndOf="@id/critDelete"
+        app:layout_constraintTop_toTopOf="@id/critSearchType"
+        app:layout_constraintWidth_percent=".1" />
+
+<!--    android:popupBackground="@color/darkBackground"-->
+    <TextView
+        android:id="@+id/tvNot"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="bottom|center_horizontal"
+        android:paddingTop="5dp"
+        android:text="NOT"
+        android:textColor="#BD2525"
+        android:textSize="10sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintWidth_percent=".1"
+        app:layout_constraintBottom_toBottomOf="@+id/critSearchType"
+        app:layout_constraintEnd_toStartOf="@+id/critSearchType"
+        app:layout_constraintStart_toEndOf="@+id/critDelete" />
+
+    <Spinner
+        android:id="@+id/critSearchType"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+
+        android:background="@color/whiteBackground"
+        android:gravity="bottom"
+        android:paddingTop="1dp"
+
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/critEntry"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/critDelete"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".3" />
+
+    <EditText
+        android:id="@+id/critEntry"
+        style="@android:style/Widget.EditText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:background="@android:color/background_light"
+        android:digits="cvABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789*@?.,^+[]&lt;&gt;(|){}\\~-"
+        android:hint="@string/searchterm"
+        android:imeOptions="actionSearch|flagForceAscii"
+        android:inputType="textCapCharacters|textNoSuggestions"
+
+        android:paddingStart="8dp"
+        android:paddingLeft="4dp"
+        android:paddingEnd="2dp"
+        android:paddingRight="2dp"
+        android:singleLine="true"
+        android:textColor="@color/darkText"
+        android:textColorHighlight="@android:color/holo_blue_dark"
+        android:textSize="16sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/critSearchType"
+        app:layout_constraintStart_toEndOf="@id/critSearchType"
+        app:layout_constraintTop_toTopOf="@id/critSearchType"
+        app:layout_constraintWidth_percent=".3"
+        tools:background="@android:color/transparent"
+        tools:hint="Search Term" />
+
+    <Spinner
+        android:id="@+id/critSubject"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+
+        android:paddingStart="8dp"
+        android:paddingLeft="8dp"
+        android:paddingEnd="2dp"
+        android:paddingRight="2dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/critSearchType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/critSearchType"
+        app:layout_constraintTop_toTopOf="@id/critSearchType"
+        tools:visibility="visible" />
+
+    <Spinner
+        android:id="@+id/critPredefined"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+
+        android:paddingStart="8dp"
+        android:paddingLeft="8dp"
+        android:paddingEnd="2dp"
+        android:paddingRight="2dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/critSearchType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/critSearchType"
+        app:layout_constraintTop_toTopOf="@id/critSearchType"
+        tools:visibility="visible" />
+
+    <Spinner
+        android:id="@+id/critLexicon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+
+        android:paddingStart="8dp"
+        android:paddingLeft="8dp"
+        android:paddingEnd="2dp"
+        android:paddingRight="2dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/critSearchType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/critSearchType"
+        app:layout_constraintTop_toTopOf="@id/critSearchType"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/critBlank"
+
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+
+        android:background="#C8C8C8"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:padding="0dp"
+        android:text="@string/blanktile"
+        android:textAllCaps="true"
+        android:textColor="@color/blackText"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/critSearchType"
+        app:layout_constraintEnd_toStartOf="@id/critClear"
+        app:layout_constraintStart_toEndOf="@id/critEntry"
+        app:layout_constraintTop_toTopOf="@id/critSearchType"
+        app:layout_constraintWidth_percent=".1" />
+
+    <Button
+        android:id="@+id/critClear"
+
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:background="#C8C8C8"
+
+        android:gravity="center"
+
+        android:includeFontPadding="false"
+        android:padding="0dp"
+        android:text="@string/x"
+        android:textAllCaps="true"
+        android:textColor="@color/blackText"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/critSearchType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@id/critBlank"
+        app:layout_constraintTop_toTopOf="@id/critSearchType"
+        app:layout_constraintWidth_percent=".1" />
+
+    <TextView
+        android:id="@+id/critFile"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="#FFFFFF"
+        android:ellipsize="start"
+        android:paddingLeft="3dp"
+        android:singleLine="true"
+        android:text="File specification"
+        android:textColor="@color/blackText"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/critSearchType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/critClear"
+        app:layout_constraintTop_toTopOf="@id/critSearchType"
+        app:layout_constraintWidth_percent=".5"
+        tools:visibility="gone" />
+
+    <Spinner
+        android:id="@+id/critMin"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:background="@color/whiteBackground"
+
+        android:paddingTop="1dp"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/critSearchType"
+        app:layout_constraintEnd_toStartOf="@id/critMax"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@id/critFile"
+        app:layout_constraintTop_toTopOf="@id/critSearchType"
+        app:layout_constraintWidth_percent=".25"
+        tools:visibility="gone" />
+
+    <Spinner
+        android:id="@+id/critMax"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/whiteBackground"
+
+        android:paddingTop="1dp"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/critSearchType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/critMin"
+        app:layout_constraintWidth_percent=".25"
+        app:layout_constraintTop_toTopOf="@id/critSearchType"
+        tools:visibility="gone" />
+
+
+</android.support.constraint.ConstraintLayout>

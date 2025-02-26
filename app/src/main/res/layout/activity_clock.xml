@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context="com.tylerhosting.hoot.hoot.ClockActivity">
+
+    <ImageButton
+        android:id="@+id/btnPause"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/pause_button"
+        android:padding="4dp"
+        android:text="Start"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/White"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Black"
+        app:srcCompat="@drawable/ic_stop_dark" />
+
+    <!--        android:background="#EC3434"-->
+
+    <Button
+        android:id="@+id/Black"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/black_background_border"
+        android:gravity="center"
+        android:rotation="180"
+        android:text="25:00"
+        android:textColor="#888888"
+        android:textSize="90sp"
+        app:layout_constraintBottom_toTopOf="@id/btnPause"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPlayerB" />
+
+    <Button
+        android:id="@+id/White"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/black_background_border"
+        android:gravity="center"
+        android:text="25:00"
+        android:textColor="#888888"
+        android:textSize="90sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvPlayerA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnPause" />
+
+    <Button
+        android:id="@+id/WhiteMove"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/black_background_border"
+        android:padding="0dp"
+        android:text="00"
+        android:textColor="#888888"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@id/tvPlayerA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline11" />
+
+    <ImageButton
+        android:id="@+id/btnJudge"
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#02FFFFFF"
+        android:onClick="openJudge"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:tint="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/White"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Black"
+        app:srcCompat="@mipmap/judge" />
+
+    <ImageButton
+        android:id="@+id/btnSettings"
+        android:layout_width="54dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:background="#00FFFFFF"
+        android:onClick="openSettings"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:tint="#FFFFFF"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/White"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Black"
+        app:srcCompat="@drawable/ic_settings_24px"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/btnHelp"
+        android:layout_width="35dp"
+        android:layout_height="43dp"
+        android:background="#000000"
+        android:gravity="center"
+        android:onClick="showHelp"
+        android:padding="0dp"
+        android:text="\?"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:tint="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/White"
+        app:layout_constraintStart_toEndOf="@+id/btnSettings"
+        app:layout_constraintTop_toBottomOf="@+id/Black" />
+
+    <TextView
+        android:id="@+id/tvPlayerA"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:gravity="center"
+        android:text="Player A"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/White" />
+
+    <TextView
+        android:id="@+id/tvPlayerB"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:rotation="180"
+        android:text="Player B"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/Black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/BlackMove"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/black_background_border"
+        android:padding="0dp"
+        android:rotation="180"
+        android:text="00"
+        android:textColor="#888888"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPlayerB" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".18" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.82" />
+
+</android.support.constraint.ConstraintLayout>

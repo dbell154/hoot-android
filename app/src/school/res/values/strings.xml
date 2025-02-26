@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Hoot for School</string>
+    <string name="app_name_beta">Hoot School beta</string>
+    <string name="app_name_debug">Hoot School debug</string>
+    <string name= "app_wj">Hoot for School Word Judge</string>
+    <string name= "app_timeclock">Hoot for School Time Clock</string>
+    <string name ="google_play_link">https://play.google.com/store/apps/details?id=com.tylerhosting.hoot.school</string>
+</resources>

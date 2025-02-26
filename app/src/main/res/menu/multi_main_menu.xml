@@ -1,0 +1,64 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.tylerhosting.hoot.hoot.MultiSearchActivity">
+
+    <item
+        android:id="@+id/activity_search"
+        android:orderInCategory="100"
+        android:title="Standard Search"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/activity_cards"
+        android:orderInCategory="100"
+        android:title="Card Boxes"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/activity_judge"
+        android:orderInCategory="100"
+        android:title="@string/word_judge"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/activity_lookup"
+        android:orderInCategory="100"
+        android:title="@string/lookup"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/activity_timeclock"
+        android:orderInCategory="100"
+        android:title="@string/timeclock"
+        app:showAsAction="never"
+        android:enabled="true"/>
+    <item
+        android:id="@+id/tile_tracker"
+        android:orderInCategory="100"
+        android:title="Tile Tracker"
+        app:showAsAction="never"
+        android:enabled="true"/>
+    <item
+        android:id="@+id/action_tools"
+        android:orderInCategory="100"
+        android:title="@string/action_tools"
+        app:showAsAction="never"
+        android:enabled="true"/>
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/activity_help"
+        android:orderInCategory="101"
+        android:title="@string/help"
+        app:showAsAction="never"
+        android:enabled="true"/>
+    <item
+        android:id="@+id/about_activity"
+        android:orderInCategory="102"
+        android:title="About..." />
+    <item
+        android:id="@+id/exit"
+        android:title="Exit"
+        android:orderInCategory="103"/>
+
+</menu>

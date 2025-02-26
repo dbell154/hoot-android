@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorPrimary"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        tools:context="com.tylerhosting.hoot.hoot.AboutActivity">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center_horizontal"
+            android:text="@string/about_hoot"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/versions"
+            android:layout_width="244dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:text="versions"
+            android:textColor="@android:color/background_light"
+            app:layout_constraintBottom_toTopOf="@+id/AboutHead"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+        <TextView
+            android:id="@+id/AboutHead"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="About"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/about"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/versions" />
+
+        <TextView
+            android:id="@+id/about"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+
+            android:background="@android:color/background_light"
+            android:enabled="true"
+            android:fadeScrollbars="false"
+            android:padding="6dp"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbarDefaultDelayBeforeFade="10"
+
+            android:scrollbarSize="8dp"
+            android:scrollbarStyle="insideOverlay"
+            android:scrollbars="vertical"
+            android:text="@string/about_hoot"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/CreditsHead"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/AboutHead"
+            tools:scrollbarAlwaysDrawVerticalTrack="true" />
+
+        <TextView
+            android:id="@+id/CreditsHead"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:padding="6px"
+            android:text="Credits"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/lexicons"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/about" />
+
+        <TextView
+            android:id="@+id/lexicons"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+
+
+            android:background="@android:color/background_light"
+            android:fadeScrollbars="false"
+            android:padding="6px"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbarDefaultDelayBeforeFade="10"
+            android:scrollbarSize="8dp"
+
+            android:scrollbarStyle="insideOverlay"
+            android:scrollbars="vertical"
+            android:text="Lexicon Credits"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/policy"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/CreditsHead" />
+
+        <Button
+            android:id="@+id/policy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="3dp"
+            android:text="Privacy Policy"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/facebook"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lexicons" />
+
+        <Button
+            android:id="@+id/facebook"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="2dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="0dp"
+            android:text="Facebook"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@id/policy"
+            app:layout_constraintEnd_toStartOf="@+id/feedback"
+            app:layout_constraintStart_toEndOf="@+id/policy"
+            app:layout_constraintTop_toTopOf="@id/policy"/>
+
+        <Button
+            android:id="@+id/feedback"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="2dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="0dp"
+            android:textSize="10sp"
+            android:text="Feedback"
+            app:layout_constraintBottom_toBottomOf="@id/policy"
+            app:layout_constraintEnd_toStartOf="@+id/rate"
+            app:layout_constraintStart_toEndOf="@+id/facebook"
+            app:layout_constraintTop_toTopOf="@id/policy"/>
+
+        <Button
+            android:id="@+id/rate"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="2dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="0dp"
+            android:text="Rate"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@id/policy"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/feedback"
+            app:layout_constraintTop_toTopOf="@id/policy"/>
+
+
+</android.support.constraint.ConstraintLayout>

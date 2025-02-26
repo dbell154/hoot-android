@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Hoot</string>
+    <string name="title_activity_import_lexicon">ImportLexiconActivity</string>
+    <string name="app_wj">Hoot Word Judge</string>
+    <string name="search">Search</string>
+    <string name="action_settings">Settings</string>
+    <string name="exit">Exit</string>
+    <string name="searchtype">Search Type</string>
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/recall"
+        android:title="List Recall" />
+
+    <item android:id="@+id/anagram_quiz"
+        android:title="Anagrams" />
+
+    <item android:id="@+id/hooks_quiz"
+        android:title="Hook Words" />
+
+    <item android:id="@+id/stem_quiz"
+        android:title="Blank Anagrams" />
+
+<!--
+    <item android:id="@+id/build_quiz"
+        android:title="Word Builder" />
+
+    <item android:id="@+id/contains_quiz"
+        android:title="Contains" />
+
+    <item android:id="@+id/containsall_quiz"
+        android:title="Contains All" />
+
+    <item android:id="@+id/containsAny_quiz"
+        android:title="Contains Any" />
+
+    <item android:id="@+id/subwords_quiz"
+        android:title="Subwords" />
+-->
+
+</menu>

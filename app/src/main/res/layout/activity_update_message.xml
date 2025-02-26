@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C2C4CA"
+    tools:context=".UpdateMessageActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadeScrollbars="false"
+        android:paddingBottom="16dp"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbars="vertical"
+        tools:context="com.tylerhosting.hoot.hoot.ToolsActivity">
+
+
+        <TextView
+            android:id="@+id/tvWait"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="#00714848"
+            android:gravity="clip_vertical"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:text="I'm not sure, or I want to wait. Ask me later."
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/btnWait"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnWait"
+            app:layout_constraintTop_toTopOf="@id/btnWait" />
+
+        <TextView
+            android:id="@+id/tvNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="#00714848"
+            android:gravity="clip_vertical"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:text="Do not update database and don't ask again."
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/btnNo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnNo"
+            app:layout_constraintTop_toTopOf="@id/btnNo" />
+
+        <TextView
+            android:id="@+id/tvUpdateTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="32dp"
+            android:gravity="center"
+            android:text="Database Update"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tvUpdateText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvUpdateText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/update_text"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/btnYes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvUpdateTitle" />
+
+        <!--    android:onClick="updateDB"-->
+        <Button
+            android:id="@+id/btnYes"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginTop="16dp"
+            android:background="#009688"
+            android:text="Yes"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvUpdateText" />
+        <!--    android:onClick="doUpdate"-->
+
+
+        <TextView
+            android:id="@+id/tvYes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="#00714848"
+            android:gravity="clip_vertical"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:text="Update Database with the latest word lists."
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnYes"
+            app:layout_constraintTop_toTopOf="@+id/btnYes" />
+
+        <!--    android:onClick="noUpdate"-->
+        <Button
+            android:id="@+id/btnNo"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="#EC1010"
+            android:text="No"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chkNoBackup" />
+
+        <!--    android:onClick="waitForUpdate"-->
+        <Button
+            android:id="@+id/btnWait"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="#FF9800"
+            android:text="Wait"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnNo" />
+
+        <CheckBox
+            android:id="@+id/chkNoBackup"
+            android:layout_width="214dp"
+            android:layout_height="30dp"
+            android:layout_margin="2dp"
+            android:text="Don't make backup."
+            app:layout_constraintStart_toStartOf="@+id/tvYes"
+            app:layout_constraintTop_toBottomOf="@+id/tvYes" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

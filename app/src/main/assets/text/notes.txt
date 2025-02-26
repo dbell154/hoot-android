@@ -1,0 +1,310 @@
+﻿Hook Words
+Anagrams, Blank Anagrams
+working Contains Any
+
+
+hashooks
+
+                            if ( offset > skips) {
+                                skips++;
+                                continue;
+                            }
+
+
+??                            if (limit == 0 || !unfiltered || limit > position)
+
+                if (limit > 0)
+                    if (position == limit)
+                        break;
+
+
+Manual limiting
+Add
+
+int limit, int offset,
+after ordering,
+
+add
+        if (limit == 0)
+            limit = LexData.getMaxList();
+        int skips = 0;
+
+Replace
+            if (!rack)
+                if (LexData.getMaxList() > 0)
+                    if (matrixCursor.getCount() == LexData.getMaxList())
+                        break;
+WITH
+//                Log.d("Limit", limit + ":" + offset);
+            if (!rack) {
+                int position = matrixCursor.getCount();
+                if (position < offset - skips) {
+                    skips++;
+                    continue;
+                }
+                if (limit > 0)
+                    if (position == limit)
+                        break;
+                matrixCursor.addRow(get_CursorRow(cursor));
+            }
+
+
+or
+Replace
+
+
+WITH
+            if (isAnagram(first, anagram, blankcount)) {
+                int position = matrixCursor.getCount();
+                if (position < offset - skips) {
+                    skips++;
+                    continue;
+                }
+                if (limit > 0)
+                    if (position == limit)
+                        break;
+                matrixCursor.addRow(get_CursorRow(cursor));
+            }
+
+
+
+
+SQL limit
+Use
+        String limits = limitStringer(limit, offset);
+instead of
+        if (limits == "")
+            limits = limitString(LexData.getMaxList());
+
+
+Called by SearchActivity
+d.blankAnagrams
+1 d.subanagrams
+d.bylettercount
+d.betweenlengths
+
+2 d.hookwords
+d.gethashooks
+
+3.
+d.getpattern
+
+4.
+d.contains
+
+5.
+searchthread 5
+d.subanagrams
+
+6. 
+searchthread 6
+
+7.
+searchthread 7
+
+8.
+d.begins
+
+9.
+d.ends
+
+10.
+d.subwords
+
+11.
+d.getparallel
+
+12.
+d.splitters
+
+16.
+gettextfile
+
+
+
+
+
+
+No limits in ReviewActivity or SubsearchActivity
+
+
+Flashcard mode (Quiz only)
+Tap for answer
+Swipe up - correct (green check mark)
+Swipe down - wrong
+Swipe left
+Swipe right
+
+
+WWF
+WWF 2015 or before za
+WWF 2017 bestie, turnt, hangry
+
+WWF 2019 je, oo
+
+On lexicon approval
+/Modify frmUpdate content
+/Change patch number condition to 4
+/set showupdate version to 0
+HootGold checks version when loading
+Flags.
+
+
+
+Promo
+While Hoot is not yet the foremost application for Scrabble word study, it is configurable by users. When fully developed users can create study lexicons from their own word list in most any language by adding the content to a Hoot database. In addition to Words, Stems, Prefixes, Suffixes, and Definitions are configurable.
+
+
+
+
+UPDATE DOCUMENTATION
+
+•TODOs
+ •Android studio text
+ •Desktop drawer
+ •Email
+ •Color note
+From searches on phones
+
+PC Bugs: SQL commands in UpdateDatabase, (not used in SQLite)
+patchDatabase
+
+
+Has Hook -- see LetterStudies
+Hooked Words - words with inner hooks
+
+
+Preference changes steps
+Add to pref_general.xml (or other)
+
+Use preference in code
+
+
+
+
+
+
+* Create notifications for Configure
+(add Progress bar)
+
+Lexicons:
+* Import lexicon from Android
+Check table presence
+Check word count
+If word count = 0 and tablePresent, import from Android
+
+On selection, only list PC versions
+
+
+
+
+Parallel Plays
+Surprise Hooks
+Subject Lists (see frmQueryView for categoryless)
+
+
+
+======= Things to Do
+./need to correct definition processing to not allow adding words with tabs
+Need to add subject lists to multiHoot.db3
+Error when back quote and no def()
+./If only Length selected, switch to Letter Count
+./If search term, use Anagrams
+Check length on super, wb
+Dialog: Length must be greater/less than search term.
+Adjust size for wb, contains all, ba, ana
+•Different bg for stats columns
+•Calculate font size based on screen width.
+
+
+
+
+======= Features to Add
+
+Dictionaries
+enable edit details, delete dictionaries
+
+Screen Rotation (Orientation change)
+Reload list data after rotate
+
+Pinch Zoom
+
+Reset database scores
+
+Subject lists, Save/load searches, save/load lists
+
+Tips
+(Tip, #, seen: default no)
+
+•Idea - + button to add more parameters
+
+•Show dB search after permission
+
+•Wordnik api
+
+
+
+======= Documentation/Promo
+
+
+======= Dev Notes
+
+
+LexData sets global
+plan
+??Lexicon - creates a new lexicon structure
+??setLexicon - set global lexicon structure
+LexData.loadLexicon - gets info from database and sets global lexicon (first if name not specified)
+useLexicon - set lexicon and prefs
+databaseAccess.set_lexicon - sets parameters of existing lexicon
+
+organize setLexicon methods
+(prefs, LexData, first lexicon)
+databaseAccess.set_lexicon - sets parameters of existing lexicon
+ - called by ImportLexiconActivity
+LexData.loadLexicon - sets LexData lexicon parameters by calling databaseAccess.set_Lexicon
+ - called by many
+
+SplashActivity.setLexicon -
+
+
+checkLexicon
+LexiconExists
+
+
+
+Database mods
+Delete converted words from tblLexiconWords
+If all, link Definitions to WordID in extracted lexicon
+Delete Words table
+
+
+
+==== Search History
+•Same table for history / bookmarked searches
+ •Search title (user can add when bookmarking)
+ •----- Reading -----
+ •Change lexicon
+ •Sort
+ •Change display
+ •Execute search
+ •----- Search record -----
+ •Search engine (query will have multiple criteria items)
+ •Search id
+ •Lexicon text
+ •Date
+ •Bookmark bool
+ •----- criteria record ----- (see zyzz)
+ •Criteria id
+ •Search id (foreign)
+ •Search type text
+ •Search letters, choice text
+ •Begin
+ •Ends
+ •Min Length
+ •Max length
+ •Sort
+ •Thenby
+ •Display type
+ •Filter letters
+ •Include search term in filter

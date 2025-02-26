@@ -1,0 +1,397 @@
+beta
+----
+Compile configuration: betaCompile
+build.gradle name: android.sourceSets.beta
+Java sources: [app\src\beta\java]
+Manifest file: app\src\beta\AndroidManifest.xml
+Android resources: [app\src\beta\res]
+Assets: [app\src\beta\assets]
+AIDL sources: [app\src\beta\aidl]
+RenderScript sources: [app\src\beta\rs]
+JNI sources: [app\src\beta\jni]
+JNI libraries: [app\src\beta\jniLibs]
+Java-style resources: [app\src\beta\resources]
+
+
+collins
+-------
+Compile configuration: collinsCompile
+build.gradle name: android.sourceSets.collins
+Java sources: [app\src\collins\java]
+Manifest file: app\src\collins\AndroidManifest.xml
+Android resources: [app\src\collins\res]
+Assets: [app\src\collins\assets]
+AIDL sources: [app\src\collins\aidl]
+RenderScript sources: [app\src\collins\rs]
+JNI sources: [app\src\collins\jni]
+JNI libraries: [app\src\collins\jniLibs]
+Java-style resources: [app\src\collins\resources]
+
+
+wj2
+---
+Compile configuration: wj2Compile
+build.gradle name: android.sourceSets.wj2
+Java sources: [app\src\wj2\java]
+Manifest file: app\src\wj2\AndroidManifest.xml
+Android resources: [app\src\wj2\res]
+Assets: [app\src\wj2\assets]
+AIDL sources: [app\src\wj2\aidl]
+RenderScript sources: [app\src\wj2\rs]
+JNI sources: [app\src\wj2\jni]
+JNI libraries: [app\src\wj2\jniLibs]
+Java-style resources: [app\src\wj2\resources]
+
+
+
+
+8:08:19 AM: Executing task 'sourceSets'...
+
+Executing tasks: [sourceSets]
+
+:app:sourceSets
+
+------------------------------------------------------------
+Project :app
+------------------------------------------------------------
+
+androidTest
+-----------
+Compile configuration: androidTestCompile
+build.gradle name: android.sourceSets.androidTest
+Java sources: [app\src\androidTest\java]
+Manifest file: app\src\androidTest\AndroidManifest.xml
+Android resources: [app\src\androidTest\res]
+Assets: [app\src\androidTest\assets]
+AIDL sources: [app\src\androidTest\aidl]
+RenderScript sources: [app\src\androidTest\rs]
+JNI sources: [app\src\androidTest\jni]
+JNI libraries: [app\src\androidTest\jniLibs]
+Java-style resources: [app\src\androidTest\resources]
+
+androidTestCollins
+------------------
+Compile configuration: androidTestCollinsCompile
+build.gradle name: android.sourceSets.androidTestCollins
+Java sources: [app\src\androidTestCollins\java]
+Manifest file: app\src\androidTestCollins\AndroidManifest.xml
+Android resources: [app\src\androidTestCollins\res]
+Assets: [app\src\androidTestCollins\assets]
+AIDL sources: [app\src\androidTestCollins\aidl]
+RenderScript sources: [app\src\androidTestCollins\rs]
+JNI sources: [app\src\androidTestCollins\jni]
+JNI libraries: [app\src\androidTestCollins\jniLibs]
+Java-style resources: [app\src\androidTestCollins\resources]
+
+androidTestCollinsDebug
+-----------------------
+Compile configuration: androidTestCollinsDebugCompile
+build.gradle name: android.sourceSets.androidTestCollinsDebug
+Java sources: [app\src\androidTestCollinsDebug\java]
+Manifest file: app\src\androidTestCollinsDebug\AndroidManifest.xml
+Android resources: [app\src\androidTestCollinsDebug\res]
+Assets: [app\src\androidTestCollinsDebug\assets]
+AIDL sources: [app\src\androidTestCollinsDebug\aidl]
+RenderScript sources: [app\src\androidTestCollinsDebug\rs]
+JNI sources: [app\src\androidTestCollinsDebug\jni]
+JNI libraries: [app\src\androidTestCollinsDebug\jniLibs]
+Java-style resources: [app\src\androidTestCollinsDebug\resources]
+
+androidTestDebug
+----------------
+Compile configuration: androidTestDebugCompile
+build.gradle name: android.sourceSets.androidTestDebug
+Java sources: [app\src\androidTestDebug\java]
+Manifest file: app\src\androidTestDebug\AndroidManifest.xml
+Android resources: [app\src\androidTestDebug\res]
+Assets: [app\src\androidTestDebug\assets]
+AIDL sources: [app\src\androidTestDebug\aidl]
+RenderScript sources: [app\src\androidTestDebug\rs]
+JNI sources: [app\src\androidTestDebug\jni]
+JNI libraries: [app\src\androidTestDebug\jniLibs]
+Java-style resources: [app\src\androidTestDebug\resources]
+
+androidTestWj2
+--------------
+Compile configuration: androidTestWj2Compile
+build.gradle name: android.sourceSets.androidTestWj2
+Java sources: [app\src\androidTestWj2\java]
+Manifest file: app\src\androidTestWj2\AndroidManifest.xml
+Android resources: [app\src\androidTestWj2\res]
+Assets: [app\src\androidTestWj2\assets]
+AIDL sources: [app\src\androidTestWj2\aidl]
+RenderScript sources: [app\src\androidTestWj2\rs]
+JNI sources: [app\src\androidTestWj2\jni]
+JNI libraries: [app\src\androidTestWj2\jniLibs]
+Java-style resources: [app\src\androidTestWj2\resources]
+
+androidTestWj2Debug
+-------------------
+Compile configuration: androidTestWj2DebugCompile
+build.gradle name: android.sourceSets.androidTestWj2Debug
+Java sources: [app\src\androidTestWj2Debug\java]
+Manifest file: app\src\androidTestWj2Debug\AndroidManifest.xml
+Android resources: [app\src\androidTestWj2Debug\res]
+Assets: [app\src\androidTestWj2Debug\assets]
+AIDL sources: [app\src\androidTestWj2Debug\aidl]
+RenderScript sources: [app\src\androidTestWj2Debug\rs]
+JNI sources: [app\src\androidTestWj2Debug\jni]
+JNI libraries: [app\src\androidTestWj2Debug\jniLibs]
+Java-style resources: [app\src\androidTestWj2Debug\resources]
+
+beta
+----
+Compile configuration: betaCompile
+build.gradle name: android.sourceSets.beta
+Java sources: [app\src\beta\java]
+Manifest file: app\src\beta\AndroidManifest.xml
+Android resources: [app\src\beta\res]
+Assets: [app\src\beta\assets]
+AIDL sources: [app\src\beta\aidl]
+RenderScript sources: [app\src\beta\rs]
+JNI sources: [app\src\beta\jni]
+JNI libraries: [app\src\beta\jniLibs]
+Java-style resources: [app\src\beta\resources]
+
+collins
+-------
+Compile configuration: collinsCompile
+build.gradle name: android.sourceSets.collins
+Java sources: [app\src\collins\java]
+Manifest file: app\src\collins\AndroidManifest.xml
+Android resources: [app\src\collins\res]
+Assets: [app\src\collins\assets]
+AIDL sources: [app\src\collins\aidl]
+RenderScript sources: [app\src\collins\rs]
+JNI sources: [app\src\collins\jni]
+JNI libraries: [app\src\collins\jniLibs]
+Java-style resources: [app\src\collins\resources]
+
+collinsBeta
+-----------
+Compile configuration: collinsBetaCompile
+build.gradle name: android.sourceSets.collinsBeta
+Java sources: [app\src\collinsBeta\java]
+Manifest file: app\src\collinsBeta\AndroidManifest.xml
+Android resources: [app\src\collinsBeta\res]
+Assets: [app\src\collinsBeta\assets]
+AIDL sources: [app\src\collinsBeta\aidl]
+RenderScript sources: [app\src\collinsBeta\rs]
+JNI sources: [app\src\collinsBeta\jni]
+JNI libraries: [app\src\collinsBeta\jniLibs]
+Java-style resources: [app\src\collinsBeta\resources]
+
+collinsDebug
+------------
+Compile configuration: collinsDebugCompile
+build.gradle name: android.sourceSets.collinsDebug
+Java sources: [app\src\collinsDebug\java]
+Manifest file: app\src\collinsDebug\AndroidManifest.xml
+Android resources: [app\src\collinsDebug\res]
+Assets: [app\src\collinsDebug\assets]
+AIDL sources: [app\src\collinsDebug\aidl]
+RenderScript sources: [app\src\collinsDebug\rs]
+JNI sources: [app\src\collinsDebug\jni]
+JNI libraries: [app\src\collinsDebug\jniLibs]
+Java-style resources: [app\src\collinsDebug\resources]
+
+collinsRelease
+--------------
+Compile configuration: collinsReleaseCompile
+build.gradle name: android.sourceSets.collinsRelease
+Java sources: [app\src\collinsRelease\java]
+Manifest file: app\src\collinsRelease\AndroidManifest.xml
+Android resources: [app\src\collinsRelease\res]
+Assets: [app\src\collinsRelease\assets]
+AIDL sources: [app\src\collinsRelease\aidl]
+RenderScript sources: [app\src\collinsRelease\rs]
+JNI sources: [app\src\collinsRelease\jni]
+JNI libraries: [app\src\collinsRelease\jniLibs]
+Java-style resources: [app\src\collinsRelease\resources]
+
+debug
+-----
+Compile configuration: debugCompile
+build.gradle name: android.sourceSets.debug
+Java sources: [app\src\debug\java]
+Manifest file: app\src\debug\AndroidManifest.xml
+Android resources: [app\src\debug\res]
+Assets: [app\src\debug\assets]
+AIDL sources: [app\src\debug\aidl]
+RenderScript sources: [app\src\debug\rs]
+JNI sources: [app\src\debug\jni]
+JNI libraries: [app\src\debug\jniLibs]
+Java-style resources: [app\src\debug\resources]
+
+main
+----
+Compile configuration: compile
+build.gradle name: android.sourceSets.main
+Java sources: [app\src\main\java]
+Manifest file: app\src\main\AndroidManifest.xml
+Android resources: [app\src\main\res\layouts\activities, app\src\main\res\layouts\content, app\src\main\res\layouts\items, app\src\main\res\layouts, app\src\main\res]
+Assets: [app\src\main\assets]
+AIDL sources: [app\src\main\aidl]
+RenderScript sources: [app\src\main\rs]
+JNI sources: [app\src\main\jni]
+JNI libraries: [app\src\main\jniLibs]
+Java-style resources: [app\src\main\resources]
+
+release
+-------
+Compile configuration: releaseCompile
+build.gradle name: android.sourceSets.release
+Java sources: [app\src\release\java]
+Manifest file: app\src\release\AndroidManifest.xml
+Android resources: [app\src\release\res]
+Assets: [app\src\release\assets]
+AIDL sources: [app\src\release\aidl]
+RenderScript sources: [app\src\release\rs]
+JNI sources: [app\src\release\jni]
+JNI libraries: [app\src\release\jniLibs]
+Java-style resources: [app\src\release\resources]
+
+test
+----
+Compile configuration: testCompile
+build.gradle name: android.sourceSets.test
+Java sources: [app\src\test\java]
+Java-style resources: [app\src\test\resources]
+
+testBeta
+--------
+Compile configuration: testBetaCompile
+build.gradle name: android.sourceSets.testBeta
+Java sources: [app\src\testBeta\java]
+Java-style resources: [app\src\testBeta\resources]
+
+testCollins
+-----------
+Compile configuration: testCollinsCompile
+build.gradle name: android.sourceSets.testCollins
+Java sources: [app\src\testCollins\java]
+Java-style resources: [app\src\testCollins\resources]
+
+testCollinsBeta
+---------------
+Compile configuration: testCollinsBetaCompile
+build.gradle name: android.sourceSets.testCollinsBeta
+Java sources: [app\src\testCollinsBeta\java]
+Java-style resources: [app\src\testCollinsBeta\resources]
+
+testCollinsDebug
+----------------
+Compile configuration: testCollinsDebugCompile
+build.gradle name: android.sourceSets.testCollinsDebug
+Java sources: [app\src\testCollinsDebug\java]
+Java-style resources: [app\src\testCollinsDebug\resources]
+
+testCollinsRelease
+------------------
+Compile configuration: testCollinsReleaseCompile
+build.gradle name: android.sourceSets.testCollinsRelease
+Java sources: [app\src\testCollinsRelease\java]
+Java-style resources: [app\src\testCollinsRelease\resources]
+
+testDebug
+---------
+Compile configuration: testDebugCompile
+build.gradle name: android.sourceSets.testDebug
+Java sources: [app\src\testDebug\java]
+Java-style resources: [app\src\testDebug\resources]
+
+testRelease
+-----------
+Compile configuration: testReleaseCompile
+build.gradle name: android.sourceSets.testRelease
+Java sources: [app\src\testRelease\java]
+Java-style resources: [app\src\testRelease\resources]
+
+testWj2
+-------
+Compile configuration: testWj2Compile
+build.gradle name: android.sourceSets.testWj2
+Java sources: [app\src\testWj2\java]
+Java-style resources: [app\src\testWj2\resources]
+
+testWj2Beta
+-----------
+Compile configuration: testWj2BetaCompile
+build.gradle name: android.sourceSets.testWj2Beta
+Java sources: [app\src\testWj2Beta\java]
+Java-style resources: [app\src\testWj2Beta\resources]
+
+testWj2Debug
+------------
+Compile configuration: testWj2DebugCompile
+build.gradle name: android.sourceSets.testWj2Debug
+Java sources: [app\src\testWj2Debug\java]
+Java-style resources: [app\src\testWj2Debug\resources]
+
+testWj2Release
+--------------
+Compile configuration: testWj2ReleaseCompile
+build.gradle name: android.sourceSets.testWj2Release
+Java sources: [app\src\testWj2Release\java]
+Java-style resources: [app\src\testWj2Release\resources]
+
+wj2
+---
+Compile configuration: wj2Compile
+build.gradle name: android.sourceSets.wj2
+Java sources: [app\src\wj2\java]
+Manifest file: app\src\wj2\AndroidManifest.xml
+Android resources: [app\src\wj2\res]
+Assets: [app\src\wj2\assets]
+AIDL sources: [app\src\wj2\aidl]
+RenderScript sources: [app\src\wj2\rs]
+JNI sources: [app\src\wj2\jni]
+JNI libraries: [app\src\wj2\jniLibs]
+Java-style resources: [app\src\wj2\resources]
+
+wj2Beta
+-------
+Compile configuration: wj2BetaCompile
+build.gradle name: android.sourceSets.wj2Beta
+Java sources: [app\src\wj2Beta\java]
+Manifest file: app\src\wj2Beta\AndroidManifest.xml
+Android resources: [app\src\wj2Beta\res]
+Assets: [app\src\wj2Beta\assets]
+AIDL sources: [app\src\wj2Beta\aidl]
+RenderScript sources: [app\src\wj2Beta\rs]
+JNI sources: [app\src\wj2Beta\jni]
+JNI libraries: [app\src\wj2Beta\jniLibs]
+Java-style resources: [app\src\wj2Beta\resources]
+
+wj2Debug
+--------
+Compile configuration: wj2DebugCompile
+build.gradle name: android.sourceSets.wj2Debug
+Java sources: [app\src\wj2Debug\java]
+Manifest file: app\src\wj2Debug\AndroidManifest.xml
+Android resources: [app\src\wj2Debug\res]
+Assets: [app\src\wj2Debug\assets]
+AIDL sources: [app\src\wj2Debug\aidl]
+RenderScript sources: [app\src\wj2Debug\rs]
+JNI sources: [app\src\wj2Debug\jni]
+JNI libraries: [app\src\wj2Debug\jniLibs]
+Java-style resources: [app\src\wj2Debug\resources]
+
+wj2Release
+----------
+Compile configuration: wj2ReleaseCompile
+build.gradle name: android.sourceSets.wj2Release
+Java sources: [app\src\wj2Release\java]
+Manifest file: app\src\wj2Release\AndroidManifest.xml
+Android resources: [app\src\wj2Release\res]
+Assets: [app\src\wj2Release\assets]
+AIDL sources: [app\src\wj2Release\aidl]
+RenderScript sources: [app\src\wj2Release\rs]
+JNI sources: [app\src\wj2Release\jni]
+JNI libraries: [app\src\wj2Release\jniLibs]
+Java-style resources: [app\src\wj2Release\resources]
+
+
+BUILD SUCCESSFUL in 1s
+1 actionable task: 1 executed
+8:08:20 AM: Task execution finished 'sourceSets'.

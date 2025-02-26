@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fadeScrollbars="false"
+    android:textSize="14sp"
+    android:fontFamily="sans-serif-light"
+    android:height="10dp"
+
+    >
+    <item
+        android:id="@+id/addcards"
+        android:title="Add to Card Box...">
+        <menu>
+            <item android:id="@+id/anagramcards"
+                android:title="Anagrams" />
+
+            <item android:id="@+id/hookcards"
+                android:title="Hooks" />
+
+            <item android:id="@+id/blankanagramcards"
+                android:title="Blank Anagrams" />
+
+            <item android:id="@+id/listcards"
+                android:title="Lists" />
+        </menu>
+    </item>
+    <item android:id="@+id/definition"
+        android:title="Definition"/>
+
+    <item android:id="@+id/anagrams"
+        android:textSize="15sp"
+        android:actionLayout="@layout/spinitem"
+        android:title="@string/anagrams" />
+    <item android:id="@+id/hookwords"
+        android:title="@string/hook_words" />
+    <item android:id="@+id/blankanagrams"
+        android:title="Blank Anagrams" />
+    <item android:id="@+id/wordbuilder"
+        android:title="@string/word_builder" />
+
+    <item android:id="@+id/other"
+        android:title="Other...">
+        <menu>
+            <item android:id="@+id/contains"
+                android:title="@string/contains" />
+            <item android:id="@+id/subwords"
+                android:title="Subwords" />
+            <item android:id="@+id/containsall"
+                android:title="Contains All" />
+            <item android:id="@+id/begins"
+                android:title="Begins With" />
+            <item android:id="@+id/ends"
+                android:title="Ends With" />
+            <item android:id="@+id/misspells"
+                android:title="Misspells" />
+            <item android:id="@+id/transpositions"
+                android:title="Transpositions" />
+            <item android:id="@+id/stretches"
+                android:title="Stretches" />
+            <item android:id="@+id/Joins"
+                android:title="Joins" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/listheader"
+        android:title="Lists"
+        android:visible="false" />
+    <item
+        android:id="@+id/savelist"
+        android:title="Save List"
+        android:visible="true" />
+    <item
+        android:id="@+id/copylist"
+        android:title="Copy List" />
+
+
+</menu>

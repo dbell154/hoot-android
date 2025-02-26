@@ -1,0 +1,1022 @@
+
+===== Change Log =====
+
+Version 2.67
+
+
+
+Version 2.66
+Add With Definitions to Standard & bug fix
+Add Subject Lists to Power Search
+Add alphagram button to quiz
+Additional tools
+Copy Selected Files in Internal memory
+Delete Selected Files in Internal memory
+Enable import cardbox
+Remove Compact Database (possible database corruption)
+Update help files
+Enable toolbar arrow back
+
+
+Version 2.65
+Restore from 2.64 source corruption
+Add ability to import database to internal memory (saf locked devices)
+Added Tools for database, lexicon, subject list management
+Reorganize Options menu
+Removes CSW19, CSW22 from distribution database
+Include subject lists for CSW24 additions
+Minor adjustments for small screen sizes
+Minor fixes
+
+
+
+Version 2.64
+Fix copy of CSW22 to CSW24 cards
+Add copy of NWL23 to CSW24 cards
+Fix import of larger subject lists
+Can now save database using SAF
+Stems now respond to long click like other searches
+Single click still shows blank anagrams
+
+
+Version 2.63
+Add SAF file access and recognize legacy devices
+Optional SAF for legacy
+Add facebook group link to About page
+
+
+Version 2.62
+Added definitions for almost all words in all lexicons
+Added Random sort option
+Version 17
+
+
+Version 2.61
+Adding CSW24 preview
+Version 16
+
+
+Version 2.60
+Update Hoot for Collins
+
+
+Version 2.59
+Fix Options menu in other activities
+Pause slides when switching away from Hoot
+Enable Import Lexicon with SAF
+Fix savelist with SAF (short list)
+
+
+Version 2.58
+Code Version 2058
+Rearrange Options menu, tools
+
+Version 2.56
+Code Version 2056
+Enable find file, save file in Android 11+ via scoped storage
+
+
+
+Version 2.55
+Code Version 2055
+Add WOW24 to Hoot
+Add From File filter option in Card Boxes
+Add filtering to From File option in Search
+Fix Stems to show only current language stems
+Fix auto update of distributed database
+Add tool to manually update database from distribution
+
+
+
+Version 2.51
+Code Version 2051
+Update NSWL23 for 1-11-24 version
+
+
+
+Version 2.50
+Code Version 2050
+Add NWL23 lexicon to database
+
+
+Version 2.49
+Code Version 2049
+Remove links to lexicon sources to comply with Google ad policy
+
+
+Version 2.45
+Code Version 2.45
+
+
+Version 2.44
+Code Version 2044
+Disable all custom keyboards by default. Must bo enabled in Settings.
+Add filter options to Quizzes for Hooks, Blank Anagrams
+
+
+Version 2.43
+Code Version 2043
+Prevent screen rotation on Import Lexicon, Import Subject List
+Slide show bug fix
+Add With Definition criteria
+Couldn't Fix custom keyboard for Android 10+
+
+
+
+Version 2.42
+Code Version 2042
+Add In Lexicon to Power Search criteria options
+Speed up Takes Prefix/Suffix
+Minor fixes
+
+
+
+Version 2.41
+Code Version 2041
+Bug fixes
+Standard search now returns correct length in takes *fix
+Power/Multi Search is now mostly cancellable
+Improve Lookup function
+
+
+
+Version 2.40
+Code Version 2040
+Enable custom keyboard for criteria in Multi Search
+Switch between keyboard layout based on entry focus in Multi Search
+Adjust display in Multi Search
+Enable use of @ instead of * (like Zyzzyva Mobile) for global match
+
+
+
+Version 2.39
+Code Version 2039
+Add Multi Search in Options menu
+Fix trim of Search Term when text is pasted
+Fix inability to open external database not named aHoot.db3
+
+
+
+Version 2.38
+Code Version 2038
+Fix display of custom keyboard after resume
+
+
+Version 2.37
+Code Version 2037
+Fix failure to subsearch wordbuilder, etc
+Fix numeric input for slideshow seconds
+Enable slide show with 0 second pause
+automatically hide keyboard when slideshow starts
+Add CSW22 to credits page
+
+
+Version 2.36
+Code Version 2036
+Optional Database Update to CSW22
+Added Database Update option to Tools menu
+Fixes default tile color in anagram card boxes in older Android versions
+
+
+Version 2.35
+Code Version 2035
+Fix No option in database update
+
+
+Version 2.34
+Code Version 2034
+Fix beta
+CSW22
+
+
+Version 2.32
+Code Version 2032
+Include CSW22
+
+
+Version 2.31
+Code Version 2031
+Enable deletion of card boxes
+
+
+Version 2.30
+Code Version 2030
+Joins now runs in separate thread
+Tools now scrollable
+Hook Words for term entered automatically sets appropriate lengths on Search
+Tile Tracker now scrollable
+Tile Tracker background (letter) turns grey when 0 tiles left
+Tile Tracker preserves count on device rotation
+
+
+Version 2.29
+Code Version 2029
+Fix Alt Ending when no lengths set
+Fix Takes prefix/suffix returns wrong length words
+Fix Card box count not set to 0 when box is empty
+
+
+Version 2.28
+Code Version 2028
+Sorting options for From File
+Much quicker Hookless word search
+Much quicker hasHooks word search
+New option Alt Ending
+
+
+Version 2.27
+Code Version 2027
+Back in CardAnagramQuiz clears entry on first press
+Disable entry of invalid characters in search Filter
+?? disable suggestions in card count
+Allow color selection for tiles
+Fix filter handling of lowercase letters
+
+
+Version 2.26
+Code Version 2026
+Add randomize to help file
+smaller tile size when landscape
+Special card box help
+Working on tile drag
+
+
+Version 2.25
+Code Version 2025
+Fix shuffle after tiles selected (long time error)
+Fix error on Pattern filter selection
+
+
+Version 2.24
+Code Version 2024
+Larger tile buttons in anagram quizzes (for newer Android)
+font size adjustments
+
+
+Version 2.23
+Code Version 2023
+Add randomize option is card box
+Add preference to set default number of cards to quiz
+Enable fast scroll in cardboxes, schedule if preference set
+Fix: resets list name selected after Merge
+
+
+Version 2.22
+Code Version 2022
+Fix: merge of new cards
+
+
+Version 2.21
+Code Version 2020
+Fix: Import lexicon to calc scores using the selected tile set
+Add filter and merge options in card box
+faster one letter takes prefix, takes suffix
+Fix Copy Database tool
+Fix subject list
+Update app help file
+Show lexicon on Card Box Screen
+
+
+Version 2.20
+Code Version 2019
+Fix: cards not displayed in exact order of saving
+
+
+Version 2.19
+Code Version 2018
+Sort lists in order added
+Hide Status bar in timer at each click
+Clear boxes in Quiz Menu if no lists
+Fix: Import lexicon to calc scores using the selected tile set
+Show type of quiz type for lists
+Fix: Show partial results in cancelled searches
+
+
+Version 2.18
+Code Version 2017
+Add Takes Prefix, Takes Suffix search options
+changed some Dark Theme backgrounds to dark grey
+bug fixes in quiz functions
+
+
+Version 2.17
+Code Version 2016
+add Preserve Legacy External Storage
+
+
+Version 2.16
+Code Version 2015
+Enable card boxes for Android 11
+Enable limit and offset for most all search types
+Update app Help file
+
+
+Version 2.15
+Code Version 2014
+Enable legacy storage on Android 10 devices
+
+
+Version 2.13/2.14
+Code Version 2013
+Sort answers in card quiz
+Card Quiz doesn't show duplicate answers in Review
+Auto show keyboard and Enable keyboard option in Word Judge / Lookup
+Dark Theme for Card Box Menu
+Add option to delete card box lists
+Try using larger fonts (130%) in quizzes
+Disable adding words longer than 15 characters to cardbox
+Skip words in quiz with no answers
+Add sample sound to Time Clock
+
+
+Version 2.12
+Code Version 2011
+Add Flashcard mode to Card Quizzes
+Pause on Autoadvance
+
+Version 2.10
+Code Version 2009
+Auto show keyboard on open, and on resume if results empty
+
+Version 2.09
+Code Version 2008
+Auto show keyboard on Clear, clear Entry
+
+
+Version 2.08
+Code Version 2007
+Lookup now shows definition of invalid words
+Lookup now shows other lexicons a word is valid in
+Search box now trims whitespace from pasted content
+
+
+Version 2.07
+Code Version 2006
+Fix: Time Clock carryover of overtime to next game
+
+
+Version 2.06
+Code Version 2005
+Release Hoot for School (suspended)
+Fix pattern search using letter values (omitted A)
+
+Version 2.05
+Code Version 2004
+Set hint color to gray in Dark Theme
+Add NWL20 credit to credits page
+Fix not filtering when condensed
+
+Version 2.04
+Code Version 2003
+Fixes
+Update Help file
+Enable Condensed/Expanded search screen
+Make adjudication fill space
+set wj background to black
+add version to word judge screen
+add Unique Hooks to Predefined
+Hide status bar in Time Clock
+
+
+Version 2.03
+Code Version 1997
+Enable keep screen on in Time Clock
+
+
+Version 2.02
+Code Version 1996
+Add Copy List to Context options
+Internal help file updated
+Add Storage Access preferences shortcut
+Added help file for time clock
+Keep cursor position of the search term after each search
+Add Time Clock to options (three dot) menu
+
+
+
+Version 2.01
+Code Version 1994
+Fix dialog entry
+
+Version 2.00
+Code Version 1993
+Set Word Judge to characters only
+Adjust move time to sync with clock
+Use custom keyboard and enable spacebar in Word Judge
+
+Code Version 1992
+Make Time Clock background black
+Adjust time clock to display move time, overtime with -
+Try to add file navigator to Save List
+
+Code Version 1991
+Modify Android Manifest so Word Judge and Time Clock subapps are identified by Hoot
+Add Context option to Save List to file
+
+Version 1.99
+Code Version 1990
+Fix Search From File when using Dark Theme
+Fix auto hide keyboard when not custom
+
+
+Version 1.98
+Code Version 1985
+Internal help file updated
+need to update play presence, screenshots
+make timer gear smaller
+prevent rotation
+
+
+Code Version 1984
+Enhance timer
+
+Code Version 1983
+Fix Word Judge
+Add word judge button to timer
+
+Code Version 1982
+Minor fixes
+
+
+Code Version 1981
+Can now Review words in Cardboxes
+Tools: Timer
+
+Import subject list recognizes
+//List Name:
+//List Source:
+//List Credits:
+//List Description:
+//List Category:
+
+Code Version 1980
+Search option: words from file
+Tools: import subject list (1980a.zip)
+
+
+Version 1.97
+Modify table creation for Lists constraint
+Change Code Version base (now 1970-9)
+End quiz if no entries
+
+
+Version 1.96
+Minor fixes
+Add count of correct words
+Setting to show hooks in quizzes
+
+
+Version 1.94
+Fix blana quiz
+Sort review and quiz words
+
+
+Version 1.93
+Code Version 193
+Work on Card boxing
+Use CardFixActivity (works) 193c
+Add click word for definition in Slides/Review/Quiz/Cardbox
+Beta released
+
+
+
+Version 1.92
+Code Version 192
+Omit toolbar from Slides if height < 500
+
+
+
+Version 1.91
+Code Version 191
+Fix quiz titles
+Fix Tile Tracker checkbox in Dark Theme
+Reduce quiz key height
+
+
+
+
+Version 1.90
+Code Version 190
+Fix Slide display on resume
+Center alphagram in slides
+Fix Recall List when list contains blanks
+Set Recall List keyboard to custom
+
+
+
+Version 1.89
+Code Version 189
+Review and quiz font size determined by setting (like Search results)
+Added setting to allow keep screen on in Slides, Tile Tracker
+Make Play button a play/pause (shows when slideshow is running)
+When at end of list, playing will set to beginning
+Enable theme in Tile Tracker
+Update app help file
+Show alphagram below Slide
+Fix description passed to Slides, Review, and Quiz
+Press back again to exit tile tracker
+
+
+
+Version 1.88
+Code Version 117
+Add Quiz and Review options for Hook Words, Blank Anagrams, and List Recall
+Fix custom keyboard to not overlap content
+Added tile tracker tool
+
+
+
+Version 1.87
+Code Version 116
+Modify treatment of list limit (settings)B
+Minor fixes
+
+
+
+Version 1.86
+Code Version 115
+Enable loop in Slides
+Enable auto advance in quiz
+Add slides, quiz options to settings
+Fix: pasted text in search surrounded by spaces
+swap ? * on keyboard
+Separate buttons for slides, quiz
+convert new search to standard button
+Use ListView in AnagramSlides
+
+
+Version 1.85
+Code Version 114
+Add Slides, Anagram Slides, and Anagram Quiz to context menu option
+Add timer to Slides Activity
+Add user timer selection
+Add icons to buttons
+Set sort to length desc when selecting Word Builder
+
+Version 1.83
+Code Version 112
+Fix: obscure import lexicon bug
+Add Join search type
+Keyboard switches based on search option
+
+Version 1.82
+Code Version 111
+Add custom keyboard
+Fix: anagram search with single letter and *
+
+
+Version 1.81
+Code Version 108/110
+Fix: Failure to search when list limit set
+
+Version 1.80
+Code Version 107
+Add MaxLength to parameters
+Add List size limit to settings
+
+Version 1.79
+Code Version 106
+Fix: Dedicated Word Judge crashes on exit dialog
+Back clears first and back again to exit
+Change Contains All Letters to Contains All
+
+Version 1.78
+Code Version 105
+Fix: Internal database inner hooks
+
+Version 1.77
+Code Version 104
+Modified distributed database to include alphagrams in lexicons
+Add sort by alphagram option
+Modify import lexicon to create alphagrams
+Add backquote to enable checking tables with reserved characters
+Color fastScroll track to make it visible when not scrolling
+Update help screen
+
+Version 1.76
+Code Version 103
+Add rack filter to search screen
+Fix: dark theme blank cut/copy/paste dialog
+Increase font size for Word Judge
+Adjust Word Judge layout to allow for rotating
+
+Version 1.75
+Code Version 102
+Search Screen is now collapsible
+Return Import Lexicon Option to Tools
+
+Version 1.74
+Code Version 101
+Fix crash on activity reload?
+Added collapsible search screen as beta (Under Tools)
+
+Version 1.73
+Code Version 100
+Add <subsearch> with pattern search
+Fix Subsearch overlay hiding, inner back hook font size
+
+Version 1.72
+Code Version 99
+Update database version id for all apps
+Fix School inner hooks, anagram counts
+
+Version 1.71
+Code Version 97, 98
+Correct icon sizes to reduce package size
+Correct icon colors by version
+Trim database size in Hoot for School
+Fix Rate link an About.. to point to unique app
+
+Version 1.7
+Code Version 96
+Fix Subject List search (when mixed case in DB)
+Fix Tap search for Hook Words
+Show app version in search screen
+NSWL
+Move Word Judge to Options
+
+Version 1.60
+Code Version 95
+Disable scroll overlay when fastScroll disabled
+Disable subsearch reload after settings, return
+Enable Dark Theme option
+
+Version 1.59
+Code Version 94
+Fix WordBuilder broken by Color Blanks feature
+Fix Restore selections in Pattern searches after settings or new search
+
+Version 1.58
+Code Version 93
+Add tap option. Instead of definitions, can select hook words or anagrams.
+Adjust fast scroll behavior and added use fastscroll setting
+
+Version 1.57
+Code Version 92
+Fix: to reject invalid databases and reset to default (instead of letting them crash)
+Add setting to show blanks in different color
+Set word color to blank (so it doesn't conflict with blank color)
+Drop Semordnilaps
+Added Hooked Words (words with inner hook) in Predefined
+Updated app help page
+
+Version 1.56
+Code Version 91
+Made some spinners wider
+Widen score column in plain display
+Enable color letters for blanks in Anagrams, BA, Word Builder
+
+Version 1.55
+Code Version 90
+Retains search options (length, pre,suf) when restoring (after Settings)
+
+Version 1.54
+Code Version 89
+Adjust definition size based on list size
+
+Version 1.53
+Code Version 87
+adjust inner hook bullet size based on font size selection
+update copyright credits
+
+Version 1.52
+Code Version 86
+List Lexicons in Settings alphabetically
+Add list font size preference
+Add ability to detect lexicon parameters in file
+Fix allow spaces in lexicon name
+Replace CSW15 with CSW19
+
+Version 1.51
+Code Version 85
+Enable copy database to storage (appends number if exists)
+
+Version 1.50
+Code Version 84
+Fix dialog display to configure lexicons
+
+Version 1.49
+Code Version 83
+Reset database using version ID
+Remove sample data to save space
+Now includes NWL18 lexicon instead of WJ2-2016
+
+Version 1.48
+Code Version 82
+Cancel requires the cancel button
+Configure lexicon now sends notification when done
+Disable ~ unless Pattern
+Update About to show copyright information for lexicons
+
+Version 1.47
+Code Version 81
+Disallow brackets in non-pattern searches
+Subject list updates when changing databases
+Sends Notification when Lexicon imported
+Screen stays on while importing lexicon
+
+Version 1.46
+Code Version 80
+Fix inability to save lexicon preference
+
+Version 1.45
+Code Version 78
+Added Friends, Italian tilesets
+Added language "it"
+
+Version 1.44
+Code Version 77
+Import Lexicon option in Tools
+Loads first "valid" lexicon in database
+Added Help Screen
+
+Code Version 75
+Configure Lexicon in app is back
+Import Lexicon in Tools (not async)
+
+Code Version 74
+Fix inability of some devices to set All caps
+Forces All caps in Word Judge, Lookup
+
+Version 1.43
+Code Version 73
+Multiple bug fixes
+Fix bugs only in later versions of Android
+Fix fail to read lexicon name
+Fix fail to change database on first change
+Fix parallel search
+
+Version 1.42
+Code Version 72
+Speed up pattern search if only using numbers and characters
+Fix pattern keyboard input on Android 7.0
+Fix crash on new installation
+
+Version 1.41
+Code Version 71
+Fix term entry following ?
+
+Code Version 70
+Version 1.4
+Fix error when reading preferences (null)
+?? prevent black screen on Subsearch
+Code to skip MainActivity
+Fix error when parallel pattern includes empty letter (MACE)
+Add Parallel search
+Fix/Trap null LexName
+
+Code Version 68
+Version 1.3
+Fix Exit
+
+Code Version 67
+Fix word builder searching all words
+Exit warning in Word Judge only if last activity
+
+Code Version 66
+Enable cancel processing of search threads and return partial results
+
+Code Version 65
+Attempt to resolve database memory leaks
+Catch reqexp syntax error
+cleanup (remove commented code) See cv 64 for code
+
+Code Version 64
+Enable run of Word Judge separately (without running app first)
+
+Code Version 63
+Rearrange items in context menu
+
+Code Version 62
+Fix failure to add scores
+Code arrangement in Main, Splash, Search
+Fix not showing tileset setting on load
+
+Code Version 61
+Create separate activity icon for Word Judge
+Enable Anagram search using *
+
+Code Version 60
+Enable translucent opening screen
+
+Code Version 59
+Enable saved preference for lexicon and database location
+Distributing both WJ2 and Collins in Hoot
+
+Code Version 58
+Eliminate main menu and move tools, settings to action bar (three dots menu)
+Hiding keyboard
+
+Code Version 56
+Version 1.2
+Stem anagrams show blank-ed letter in lowercase
+?? Add setting
+
+Code Version 54
+Clicking on word in Stems list shows blank anagrams (anagram of stem + blank)
+Added subject list search (Click on category, list name)
+Enabled sort in subsearch
+Added lists to distributed database
+
+Code Version 53
+Enable Developer (User name "Dana") copy of database to Documents
+Change Blank Anagrams to "Stems" with lookup of common stems
+
+Code Version 52
+Version 1.1
+Faster Word Builder without blanks
+Set default for stats to true
+Second public release
+Show version in app
+
+Code Version 49
+Fix: Filters for begin/end
+Set lexlanguage to 'en' if not defined: (Galaxy Note4 errors noted)
+Fix: "Contains all" returns 0 if first char is ?
+Add  "Contains Any" search
+Fix: Hide predefined list until selected
+Fix: Algorithm for Contains All (note: term length includes blanks)
+Fix: Algorithm for Word Builder
+
+Code Version 47
+Add Palindromes, Nohooks to Predefined
+Wider letter count items
+Fix: Pattern search not showing stats
+Add HookWords by length
+Fix: Filter exception for Length
+Red Icon for Hoot for Collins
+
+Code Version 44
+Fixed compiler error in beta 43
+:( Not fixed: Word Builder is still slow
+Fixed error in anagram search when searching for one letter
+Fixed error in anagram search when one of first two letters is a blank
+Added option for Predefined Searches
+Moved Vowel, Consonant, QnotU to Predefined Searches
+Added to Predefined Searches (2 Letter, Top 3 Letter, 3 Letter, Top 4 Letter, Top Fours (BE JQXZ), High Fours (BE FHKVWY), Top Fives, High Fives
+Enable alternate tileSet when loading lexicon;
+TileSets used to convert pattern values to appropriate letters (i.e. French KWYZ is 10 points) and in Top/High searches
+
+Code Version 43
+Added subwords, transpositions, stretches subsearch
+Add about box
+Added toolbar and settings menu to Search Screen
+Enable immediate update of settings
+Added spot for Tools (Judge, Lookup..) in Settings
+
+Code Version 39
+Incomplete search message when not complete search parameters
+First public release
+Version 1.0
+
+Code Version 38
+Added WordSmith tileset option
+enable language specific prefix/suffix
+?Fix exit without unlocking database
+thread word builder for 6+ characters (CANCELLABLE)
+
+Code Version 36
+Make floating action bar semi-transparent and reduce size
+Make Settings simpler to get to
+
+Code Version 35
+Add Word Scores based on selected tile set
+
+Code Version 34
+Add background process for vowel, consonant searches
+
+Code Version 33
+Add Sorting options in search screen
+
+Code Version 32
+ignore invalid characters in anagram searches
+Filter input based on search type
+added stats to listview, and stats button
+add stats selection to preferences
+
+Code Version 31
+Add home button to subsearch screen
+
+Code Version 30
+Put makeLexicon into background thread
+
+Code Version 29
+Sped up anagram, contains all letters searches
+Can now select lexicon
+Added word title to context menu
+Added timer to subsearch
+
+Code Version 28
+add length filter to wordbuilder, superanagrams, contains
+added options for context search
+
+Code Version 27
+Added SimpleCursorAdapter bindView to speed scroll.
+
+Code Version 26
+Making progress with multi-threading (Pattern search is cancellable)
+
+Code Version 25
+Enable keyboard default in Lookup, Word Judge
+Shows invalid if not found in Lookup
+Added longclick on list to open similar words (misspells) (to replace with context menu)
+
+Code Version 24
+Fixes crash caused by wrong default value for maximum word length
+
+Code Version 23
+Set Word Judge to All Caps
+Hide Select Lexicon from Main
+Hide some entries in Settings
+Set length preference to 15 letters if not set
+Fix Search didn't start allcaps on some devices
+
+Code Version 21
+set word in list to mono
+can't set to ubuntomono.
+Renamed to Hoot (instead of HootStart)
+Fix: Trim Prefix/Suffix Language, limit to language (en)
+
+Code Version 20
+Working on Settings
+Added settings for Word Length
+Added main option to select database
+Enable Lookup activity
+enter key submits in Lookup
+
+Code Version 19
+Added definition lookup as default when no search type selected
+Fix: Unable to inflate spinner on some devices
+Fix: Unable to search definition on some devices
+Fix: Display lengths matching Length selection (was limited to 12 letters)
+
+Code Version 18
+BETA release
+Tested on API 16 - 28
+
+Code Version 17
+REMOVE UNUSED METHODS, FILES
+Add icon to toolbar
+Please wait Toast
+Turn off keyboard suggestions
+Enable search from search key on keyboard
+Fixes
+
+Code Version 15
+Added enum for searches, text
+added search types vowel heavy, consonantDumps, QnotU
+fix (double search)
+fix (pattern, word builder searches)
+change text color of word in results
+
+Code Version 14
+click on word shows definition
+
+Code Version 13
+scroll is jerky
+not mono
+Status count fixed for alternate
+alternate now searches some types
+
+Code Version 12
+Changed Word table indexing to NOCASE
+Added Second ListView to SearchActivity
+Created second SearchActivity
+Implement SimpleCursorAdapter (trial)
+
+Code Version 11
+Status Bar color
+Set subtitle of MainActivity
+Hide Copy Database button
+Add app name to status bar open
+Populate Min Size based on MaxLength
+Adjust scrollbar visibility
+Redesign layout
+(enable Landscape)
+Limit search options by length
+
+Code Version 10
+Add logic for filtering searches by length, pre/suffix
+
+Code Version 9
+Load Lexicon details in SearchActivity
+Limit results by length
+Fix Contains Letters result
+(Need to make more efficient)
+
+Code Version 8
+Adding methods to load lexicon into global List<T>
+Test with empty search (4letter)
+DB: Emulator: .19 - .28 seconds Galaxy S5: 1.51 - 2.26
+Mem: Emulator:.08 - .09 seconds Galaxy S5: 0.52 - 0.85
+
+Code Version 7
+Enabled Copy Database to external
+
+Code Version 6
+Begin change log
+Fix screen orientation to portrait
+Enable install to SD drive (not working on emulator)
+Add Settings menu (works in MainActivity)
+
+Hoot (beta) 1.0

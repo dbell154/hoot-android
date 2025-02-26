@@ -1,0 +1,271 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+
+
+    <!-- Base application themes. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="popupMenuStyle" parent="@android:style/Widget.PopupMenu">
+        <item name="android:listPreferredItemHeightSmall">70dp</item>
+    </style>
+
+
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <!--<item name="android:windowBackground">@drawable/background</item>-->
+        <item name="android:windowNoTitle">true</item>
+        <!--<item name="android:windowBackground">@color/colorBackground</item>-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+
+    <style name="SubSearchItems" parent="AppTheme">
+        <item name="android:textSize">10sp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:height">12dp</item>
+    </style>
+
+
+
+
+
+    <!-- Colors are in either values.xml (?Readonly) or colors.xml -->
+
+<!-- LIGHT THEME -->
+    <style name="LightTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorSecondary">@color/lightblue</item>
+
+        <item name="android:textColor">@color/blackText</item>
+        <item name="android:background">@color/transparent</item>
+
+        <item name="buttonStyle">@style/lightButtonStyle</item>
+        <item name="spinnerStyle">@style/lightSpinnerStyle</item>
+    </style>
+<!-- BUTTON -->
+    <style name="lightButtonStyle" parent="@android:style/Widget.Button">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:background">?attr/colorButtonNormal</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+<!-- SPINNER -->
+    <style name="lightSpinnerStyle" parent="Widget.AppCompat.Spinner">
+        <item name="android:background">@android:color/white</item>
+        <item name="android:paddingTop">1dp</item>
+        <item name="android:layout_marginStart">1dp</item>
+        <item name="android:layout_marginLeft">1dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+    </style>
+
+
+
+<!-- NOT USED - NEED TO SET OTHER COLORS IN VIEW TO MATCH-->
+<!-- PINK THEME -->
+    <style name="PinkTheme" parent="LightTheme">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/pink</item>
+        <item name="colorPrimaryDark">@color/hotpink</item>
+        <item name="colorAccent">@color/whiteText</item>
+    </style>
+
+
+
+<!-- RED THEME -->
+    <style name="RedTheme" parent="LightTheme">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/hotpink</item>
+        <item name="colorPrimaryDark">@color/red</item>
+        <item name="colorAccent">@color/pink</item>
+    </style>
+
+
+
+    colorPrimary – The color of the app bar.
+    colorPrimaryDark – The color of the status bar and contextual app bars; this is normally a dark version of colorPrimary.
+    colorAccent – The color of UI controls such as check boxes, radio buttons, and edit text boxes.
+    windowBackground – The color of the screen background.
+    textColorPrimary – The color of UI text in the app bar.
+    statusBarColor – The color of the status bar.
+    navigationBarColor – The color of the navigation bar.
+
+    CtrlB to go to source of colors, styles
+
+    <!-- DARK THEME -->
+    <style name="DarkTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/blackBackground</item>
+        <item name="colorPrimaryDark">@color/blackBackground</item>
+        <item name="colorAccent">@color/yellow</item>
+<!--        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/red</item>-->
+        <!--        <item name="statusBarBackground">@color/lightgray</item>-->
+        <item name="android:textColor">@color/whiteText</item>
+        <item name="background">@color/blackBackground</item>
+
+<!-- check boxes, etc        -->
+        <item name="colorControlActivated">@color/lightgray</item>
+        <item name="colorSecondary">@color/lightgray</item>
+        <item name="android:shadowColor">@color/lightgray</item>
+
+
+
+        <item name="android:windowBackground">@color/blackBackground</item>
+
+        <item name="android:actionMenuTextColor">@color/whiteText</item>
+
+        <!--To change the background of options menu-->
+        <item name="android:itemBackground">@color/blackBackground</item>
+        <item name="android:fastScrollTrackDrawable">@drawable/scrolltrack</item>
+
+        <!--To change the text styling of options menu items</item>-->
+        <item name="android:itemTextAppearance">@style/darkActionBar.MenuTextStyle</item>
+
+        <!-- if using android.support.v7.widget.PopupMenu
+        <item name="popupMenuStyle">@style/darkPopupMenu</item>-->
+        <item name="android:textColorHint">@color/lightgray</item>
+
+<!-- DARK THEME STYLE REFERENCES -->
+        <item name="buttonStyle">@style/darkButtonStyle</item>
+        <item name="spinnerStyle">@style/darkSpinnerStyle</item>
+        <item name="actionBarStyle">@style/darkActionBar</item>
+        <item name="alertDialogStyle">@style/darkAlertDialog</item>
+        <item name="popupMenuStyle">@style/darkContextMenu</item>
+        <!-- if using android.widget.PopupMenu -->
+        <item name="android:popupMenuStyle">@style/darkPopupMenu</item>
+        <item name="android:listViewStyle">@style/darkListView</item>
+    </style>
+
+
+<!-- DARK THEME STYLES -->
+    <style name="darkButtonStyle" parent="@android:style/Widget.Button">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:textColor">@color/whiteText</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@color/darkBackground</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="darkSpinnerStyle" parent="Widget.AppCompat.Spinner">
+        <item name="android:background">@color/blackBackground</item>
+        <item name="background">@color/blackBackground</item>
+        <item name="android:popupBackground">@color/darkBackground</item>
+
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:layout_marginStart">1dp</item>
+        <item name="android:layout_marginLeft">1dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+    </style>
+
+    <style name="darkActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="background">@color/darkBackground</item>
+        <item name="titleTextStyle">@style/darkActionBarTitle</item>
+    </style>
+
+    <style name="darkActionBarTitle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="background">@color/blackBackground</item>
+        <item name="android:textColor">@color/whiteText</item>
+    </style>
+
+    <style name="darkActionBar.MenuTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/whiteText</item>
+        <item name="titleTextColor">@color/whiteText</item>
+<!-- unused? delete -->
+<!--        <item name="android:titleTextColor">@color/whiteText</item>-->
+    </style>
+
+    <style name="darkAlertDialog" parent="Theme.AppCompat.Dialog.Alert">
+<!--        android:windowFrame-->
+        <item name="android:textColor">@color/whiteText</item>
+        <item name="android:editTextColor">@color/whiteText</item>
+        <item name="background">@color/darkBackground</item>
+        <item name="android:background">@color/darkBackground</item>
+<!-- unused? delete         -->
+<!--        <item name="android:titleTextColor">@color/whiteText</item>-->
+<!--        <item name="android:colorAccent">#0000FF</item>-->
+        <item name="colorAccent">#0000FF</item>
+    </style>
+
+    <style name="darkContextMenu" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:textColor">@color/whiteText</item>
+        <item name="android:background">@color/darkBackground</item>
+        <item name="itemBackground">@color/darkBackground</item>
+        <item name="android:popupBackground">@color/darkBackground</item>
+    </style>
+
+    <style name="darkPopupMenu" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:textColor">@color/blackText</item>
+        <item name="android:popupBackground">@color/whiteBackground</item>
+        <item name="android:background">@color/whiteBackground</item>
+    </style>
+
+    <style name="darkListView" parent="Widget.AppCompat.ListView">
+        <item name="android:background">@color/blackBackground</item>
+        <item name="android:scrollbarAlwaysDrawVerticalTrack">true</item>
+        <item name="android:fastScrollAlwaysVisible">true</item>
+    </style>
+
+<!-- unused delete -->
+<!--    <style name="darkProgressBar" parent="@android:style/Widget.ProgressBar">-->
+<!--        <item name="background">@color/darkBackground</item>-->
+<!--        <item name="android:textColor">@color/whiteText</item>-->
+<!--        <item name="android:titleTextColor">@color/whiteText</item>-->
+<!--        <item name="android:colorAccent">#0000FF</item>-->
+<!--    </style>-->
+
+<!--    <style name="KeyboardView" parent="android:Widget">-->
+<!--        <item name="android:background">@color/darkBackground</item>-->
+<!--        <item name="keyBackground">@drawable/key_bg</item>-->
+<!--        <item name="keyTextSize">22sp</item>-->
+<!--        <item name="keyTextColor">@color/whiteText</item>-->
+<!--        <item name="keyPreviewLayout">@layout/keyboard_key_preview</item>-->
+<!--        <item name="keyPreviewOffset">-12dp</item>-->
+<!--        <item name="keyPreviewHeight">80dp</item>-->
+<!--        <item name="labelTextSize">14sp</item>-->
+<!--&lt;!&ndash;        <item name="popupLayout">@android:layout/keyboard_popup_keyboard</item>&ndash;&gt;-->
+<!--        <item name="verticalCorrection">-10dp</item>-->
+<!--        <item name="shadowColor">@android:color/transparent</item>-->
+<!--        <item name="shadowRadius">2.75</item>-->
+<!--    </style>-->
+
+
+
+
+    <declare-styleable name="FontFitButton">
+        <attr name="minTextSize" format="dimension" />
+        <attr name="maxTextSize" format="dimension" />
+    </declare-styleable>
+
+
+
+</resources>

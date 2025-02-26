@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
+android:keyWidth="24%p"
+android:horizontalGap="1dp"
+android:verticalGap="1dp"
+android:keyHeight="45dp"
+android:keyTextColor="@color/colorAccent"
+android:keyBackground="@color/colorPrimaryDark"
+    >
+
+
+
+    <Row>
+        <Key android:codes="49" android:keyLabel="1" android:keyEdgeFlags="left"/>
+        <Key android:codes="50" android:keyLabel="2"/>
+        <Key android:codes="51" android:keyLabel="3"/>
+        <Key android:codes="-5" android:keyIcon="@android:drawable/ic_input_delete" android:isRepeatable="true" android:keyEdgeFlags="right"/>
+    </Row>
+    <Row>
+        <Key android:codes="52" android:keyLabel="4" android:keyEdgeFlags="left"/>
+        <Key android:codes="53" android:keyLabel="5"/>
+        <Key android:codes="54" android:keyLabel="6"/>
+        <Key android:codes="67" android:keyLabel="C" android:keyEdgeFlags="right" />
+    </Row>
+    <Row>
+        <Key android:codes="55" android:keyLabel="7" android:keyEdgeFlags="left"/>
+        <Key android:codes="56" android:keyLabel="8"/>
+        <Key android:codes="57" android:keyLabel="9"/>
+        <Key android:codes= "55011" android:keyIcon="@android:drawable/ic_media_next"  android:keyEdgeFlags="right" />
+    </Row>
+    <Row>
+        <Key android:codes="48" android:keyLabel="0"  android:horizontalGap="24%p"/>
+        <Key android:codes= "55007" android:keyIcon="@android:drawable/ic_menu_search" android:keyWidth="50%p"  android:keyEdgeFlags="right" />
+    </Row>
+
+
+<!--
+        <Key android:codes= "55008" android:keyIcon="@android:drawable/ic_menu_add"   android:horizontalGap="4%p" android:keyWidth="10%p" />
+    <Row android:rowEdgeFlags="bottom">
+    <Key android:codes="44" android:keyLabel="," android:keyWidth="10%p"  android:keyEdgeFlags="left"/>
+    <Key android:codes="47" android:keyLabel="/" android:keyWidth="10%p" />
+    <Key android:codes="32" android:keyLabel="SPACE" android:keyWidth="60%p" android:isRepeatable="true"/>
+    <Key android:codes="-4" android:keyBackground="@color/colorPrimary" android:keyLabel="DONE" android:keyWidth="20%p" android:keyEdgeFlags="right"/>
+</Row>
+-->
+</Keyboard>

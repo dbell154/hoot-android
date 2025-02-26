@@ -1,0 +1,902 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00FFFFFF"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <TextView
+        android:id="@+id/countBlank"
+        android:layout_width="24dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_vertical"
+        android:text="12"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/btnBlank"
+        app:layout_constraintTop_toTopOf="@+id/btnBlank" />
+
+    <Button
+        android:id="@+id/btnZ"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:contentDescription="Z"
+        android:longClickable="true"
+        android:onClick="useTile"
+        android:text="Z"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@id/btnBlank"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnU" />
+
+    <TextView
+        android:id="@+id/countZ"
+        android:layout_width="24dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_vertical"
+        android:text="12"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/btnZ"
+        app:layout_constraintTop_toTopOf="@id/btnZ" />
+
+    <Button
+        android:id="@+id/btnBlank"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:contentDescription="\?"
+        android:onClick="useTile"
+        android:text="\?"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="@id/btnV"
+        app:layout_constraintStart_toEndOf="@id/btnZ"
+        app:layout_constraintTop_toBottomOf="@id/btnV" />
+
+    <Button
+        android:id="@+id/btnU"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:contentDescription="U"
+        android:longClickable="true"
+        android:onClick="useTile"
+        android:text="U"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@id/btnV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnP" />
+
+    <TextView
+        android:id="@+id/countU"
+        android:layout_width="24dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_vertical"
+        android:text="12"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/btnU"
+        app:layout_constraintTop_toTopOf="@id/btnU" />
+
+    <Button
+        android:id="@+id/btnV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:contentDescription="V"
+        android:onClick="useTile"
+        android:text="V"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@id/btnW"
+        app:layout_constraintStart_toEndOf="@id/btnU"
+        app:layout_constraintTop_toBottomOf="@id/btnQ" />
+
+    <TextView
+        android:id="@+id/countV"
+        android:layout_width="24dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_vertical"
+        android:text="12"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/btnV"
+        app:layout_constraintTop_toTopOf="@id/btnV" />
+
+    <Button
+        android:id="@+id/btnW"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:contentDescription="W"
+        android:onClick="useTile"
+        android:text="W"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@id/btnX"
+        app:layout_constraintStart_toEndOf="@id/btnV"
+        app:layout_constraintTop_toBottomOf="@id/btnR" />
+
+    <TextView
+        android:id="@+id/countW"
+        android:layout_width="24dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_vertical"
+        android:text="12"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/btnW"
+        app:layout_constraintTop_toTopOf="@id/btnW" />
+
+    <Button
+        android:id="@+id/btnX"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:contentDescription="X"
+        android:onClick="useTile"
+        android:text="X"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@id/btnY"
+        app:layout_constraintStart_toEndOf="@id/btnW"
+        app:layout_constraintTop_toBottomOf="@id/btnS" />
+
+    <TextView
+        android:id="@+id/countX"
+        android:layout_width="24dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_vertical"
+        android:text="12"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/btnX"
+        app:layout_constraintTop_toTopOf="@id/btnX" />
+
+    <Button
+        android:id="@+id/btnY"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:contentDescription="Y"
+        android:onClick="useTile"
+        android:text="Y"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnX"
+        app:layout_constraintTop_toBottomOf="@id/btnT" />
+
+    <TextView
+        android:id="@+id/countY"
+        android:layout_width="24dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_vertical"
+        android:text="12"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/btnY"
+        app:layout_constraintTop_toTopOf="@id/btnY" />
+
+    <Button
+        android:id="@+id/btnA"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:contentDescription="A"
+        android:longClickable="true"
+        android:onClick="useTile"
+        android:text="A"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@+id/btnB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
+    <TextView
+        android:id="@+id/countA"
+        android:layout_width="24dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_vertical"
+        android:text="12"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/btnA"
+        app:layout_constraintTop_toTopOf="@+id/btnA" />
+
+    <Button
+        android:id="@+id/btnB"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:contentDescription="B"
+        android:onClick="useTile"
+        android:text="B"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@+id/btnC"
+        app:layout_constraintStart_toEndOf="@+id/btnA"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
+    <TextView
+        android:id="@+id/countB"
+        android:layout_width="24dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_vertical"
+        android:text="12"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/btnB"
+        app:layout_constraintTop_toTopOf="@id/btnB" />
+
+    <Button
+        android:id="@+id/btnC"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:contentDescription="C"
+        android:onClick="useTile"
+        android:text="C"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@+id/btnD"
+        app:layout_constraintStart_toEndOf="@+id/btnB"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
+    <TextView
+        android:id="@+id/countC"
+        android:layout_width="24dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_vertical"
+        android:text="12"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/btnC"
+        app:layout_constraintTop_toTopOf="@id/btnC" />
+
+    <Button
+        android:id="@+id/btnD"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:contentDescription="D"
+        android:onClick="useTile"
+        android:text="D"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@+id/btnE"
+        app:layout_constraintStart_toEndOf="@+id/btnC"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
+    <TextView
+        android:id="@+id/countD"
+        android:layout_width="24dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_vertical"
+        android:text="12"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/btnD"
+        app:layout_constraintTop_toTopOf="@id/btnD" />
+
+    <Button
+        android:id="@+id/btnE"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:contentDescription="E"
+        android:onClick="useTile"
+        android:text="E"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnD"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
+    <TextView
+        android:id="@+id/countE"
+        android:layout_width="24dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_vertical"
+        android:text="12"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/btnE"
+        app:layout_constraintTop_toTopOf="@id/btnE" />
+
+    <Button
+        android:id="@+id/btnF"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:contentDescription="F"
+        android:longClickable="true"
+        android:onClick="useTile"
+        android:text="F"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@id/btnG"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnA" />
+
+    <TextView
+        android:id="@+id/countF"
+        android:layout_width="24dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_vertical"
+        android:text="12"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/btnF"
+        app:layout_constraintTop_toTopOf="@id/btnF" />
+
+    <Button
+        android:id="@+id/btnG"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:contentDescription="G"
+        android:onClick="useTile"
+        android:text="G"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@id/btnH"
+        app:layout_constraintStart_toEndOf="@id/btnF"
+        app:layout_constraintTop_toBottomOf="@id/btnB" />
+
+    <TextView
+        android:id="@+id/countG"
+        android:layout_width="24dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_vertical"
+        android:text="12"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/btnG"
+        app:layout_constraintTop_toTopOf="@id/btnG" />
+
+    <Button
+        android:id="@+id/btnH"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:contentDescription="H"
+        android:onClick="useTile"
+        android:text="H"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@id/btnI"
+        app:layout_constraintStart_toEndOf="@id/btnG"
+        app:layout_constraintTop_toBottomOf="@id/btnC" />
+
+    <TextView
+        android:id="@+id/countH"
+        android:layout_width="24dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_vertical"
+        android:text="12"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/btnH"
+        app:layout_constraintTop_toTopOf="@id/btnH" />
+
+    <Button
+        android:id="@+id/btnI"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:contentDescription="I"
+        android:onClick="useTile"
+        android:text="I"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@id/btnJ"
+        app:layout_constraintStart_toEndOf="@id/btnH"
+        app:layout_constraintTop_toBottomOf="@id/btnD" />
+
+    <TextView
+        android:id="@+id/countI"
+        android:layout_width="24dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_vertical"
+        android:text="12"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/btnI"
+        app:layout_constraintTop_toTopOf="@id/btnI" />
+
+    <Button
+        android:id="@+id/btnJ"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:contentDescription="J"
+        android:onClick="useTile"
+        android:text="J"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnI"
+        app:layout_constraintTop_toBottomOf="@id/btnE" />
+
+    <TextView
+        android:id="@+id/countJ"
+        android:layout_width="24dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_vertical"
+        android:text="12"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/btnJ"
+        app:layout_constraintTop_toTopOf="@id/btnJ" />
+
+    <Button
+        android:id="@+id/btnK"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:contentDescription="K"
+        android:longClickable="true"
+        android:onClick="useTile"
+        android:text="K"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@id/btnL"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnF" />
+
+    <TextView
+        android:id="@+id/countK"
+        android:layout_width="24dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_vertical"
+        android:text="12"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/btnK"
+        app:layout_constraintTop_toTopOf="@id/btnK" />
+
+    <Button
+        android:id="@+id/btnL"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:contentDescription="L"
+        android:onClick="useTile"
+        android:text="L"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@id/btnM"
+        app:layout_constraintStart_toEndOf="@id/btnK"
+        app:layout_constraintTop_toBottomOf="@id/btnG" />
+
+    <TextView
+        android:id="@+id/countL"
+        android:layout_width="24dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_vertical"
+        android:text="12"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/btnL"
+        app:layout_constraintTop_toTopOf="@id/btnL" />
+
+    <Button
+        android:id="@+id/btnM"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:contentDescription="M"
+        android:onClick="useTile"
+        android:text="M"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@id/btnN"
+        app:layout_constraintStart_toEndOf="@id/btnL"
+        app:layout_constraintTop_toBottomOf="@id/btnH" />
+
+    <TextView
+        android:id="@+id/countM"
+        android:layout_width="24dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_vertical"
+        android:text="12"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/btnM"
+        app:layout_constraintTop_toTopOf="@id/btnM" />
+
+    <Button
+        android:id="@+id/btnN"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:contentDescription="N"
+        android:onClick="useTile"
+        android:text="N"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@id/btnO"
+        app:layout_constraintStart_toEndOf="@id/btnM"
+        app:layout_constraintTop_toBottomOf="@id/btnI" />
+
+    <TextView
+        android:id="@+id/countN"
+        android:layout_width="24dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_vertical"
+        android:text="12"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/btnN"
+        app:layout_constraintTop_toTopOf="@id/btnN" />
+
+    <Button
+        android:id="@+id/btnO"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:contentDescription="O"
+        android:onClick="useTile"
+        android:text="O"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnN"
+        app:layout_constraintTop_toBottomOf="@id/btnJ" />
+
+    <TextView
+        android:id="@+id/countO"
+        android:layout_width="24dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_vertical"
+        android:text="12"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/btnO"
+        app:layout_constraintTop_toTopOf="@id/btnO" />
+
+    <Button
+        android:id="@+id/btnP"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:contentDescription="P"
+        android:longClickable="true"
+        android:onClick="useTile"
+        android:text="P"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@id/btnQ"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnK" />
+
+    <TextView
+        android:id="@+id/countP"
+        android:layout_width="24dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_vertical"
+        android:text="12"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/btnP"
+        app:layout_constraintTop_toTopOf="@id/btnP" />
+
+    <Button
+        android:id="@+id/btnQ"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:contentDescription="Q"
+        android:onClick="useTile"
+        android:text="Q"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@id/btnR"
+        app:layout_constraintStart_toEndOf="@id/btnP"
+        app:layout_constraintTop_toBottomOf="@id/btnL" />
+
+    <TextView
+        android:id="@+id/countQ"
+        android:layout_width="24dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_vertical"
+        android:text="12"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/btnQ"
+        app:layout_constraintTop_toTopOf="@id/btnQ" />
+
+    <Button
+        android:id="@+id/btnR"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:contentDescription="R"
+        android:onClick="useTile"
+        android:text="R"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@id/btnS"
+        app:layout_constraintStart_toEndOf="@id/btnQ"
+        app:layout_constraintTop_toBottomOf="@id/btnM" />
+
+    <TextView
+        android:id="@+id/countR"
+        android:layout_width="24dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_vertical"
+        android:text="12"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/btnR"
+        app:layout_constraintTop_toTopOf="@id/btnR" />
+
+    <Button
+        android:id="@+id/btnS"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:contentDescription="S"
+        android:onClick="useTile"
+        android:text="S"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@id/btnT"
+        app:layout_constraintStart_toEndOf="@id/btnR"
+        app:layout_constraintTop_toBottomOf="@id/btnN" />
+
+    <TextView
+        android:id="@+id/countS"
+        android:layout_width="24dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_vertical"
+        android:text="12"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/btnS"
+        app:layout_constraintTop_toTopOf="@id/btnS" />
+
+    <Button
+        android:id="@+id/btnT"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:contentDescription="T"
+        android:onClick="useTile"
+        android:text="T"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnS"
+        app:layout_constraintTop_toBottomOf="@id/btnO" />
+
+    <TextView
+        android:id="@+id/countT"
+        android:layout_width="24dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_vertical"
+        android:text="12"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/btnT"
+        app:layout_constraintTop_toTopOf="@id/btnT" />
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/title_activity_tile_tracker"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/chkCorrection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:onClick="onCheckboxClicked"
+        android:singleLine="false"
+        android:text="@string/count_correction"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnY" />
+
+    <TextView
+        android:id="@+id/txtCorrecting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Correcting"
+        android:textColor="#E91E63"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/chkCorrection"
+        app:layout_constraintStart_toStartOf="@+id/chkCorrection"
+        app:layout_constraintTop_toBottomOf="@+id/chkCorrection" />
+
+    <TextView
+        android:id="@+id/tileset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Tile Set:"
+        android:textColor="#03A9F4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/Used"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:fontFamily="sans-serif"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/tileset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnZ" />
+
+</android.support.constraint.ConstraintLayout>

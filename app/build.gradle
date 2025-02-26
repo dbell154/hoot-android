@@ -1,0 +1,143 @@
+apply plugin: 'com.android.application'
+
+android {
+
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+
+    signingConfigs {
+        config {
+            keyAlias 'hoot0'
+            keyPassword 'JKoffee!'
+            storeFile file('C:/Projects/AndroidProjects/Signing Key/android.jks')
+            storePassword 'L2ockEAR2'
+        }
+    }
+    compileSdkVersion 30
+    defaultConfig {
+        applicationId 'com.tylerhosting.hoot'
+        manifestPlaceholders = [applicationLabel: "@string/app_name"]
+        minSdk 19
+        targetSdk 35
+        versionCode 2067
+        versionName '2.67'
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        beta {
+            manifestPlaceholders = [applicationLabel: "@string/app_name_beta"]
+            applicationIdSuffix '.beta'
+            versionNameSuffix "-beta"
+            debuggable false
+//            resValue "string", "app_name", "Beta App"
+            signingConfig signingConfigs.config
+        }
+        debug {
+            manifestPlaceholders = [applicationLabel: "@string/app_name_debug"]
+            applicationIdSuffix ".debug"
+            versionNameSuffix "-debug"
+            debuggable true
+        }
+        release {
+            manifestPlaceholders = [applicationLabel: "@string/app_name"]
+            debuggable false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+    }
+    flavorDimensions "versions"
+    productFlavors {
+        wj2 {
+            // Assigns this product flavor to the "version" flavor dimension.
+            // This property is optional if you are using only one dimension.
+            dimension "versions"
+            applicationIdSuffix ".wj2"
+        }
+        collins {
+            dimension "versions"
+            applicationIdSuffix ".collins"
+        }
+        school {
+            dimension = 'versions'
+            applicationIdSuffix = '.school'
+        }
+        francais {
+            dimension 'versions'
+        }
+        schoolna {
+            dimension 'versions'
+        }
+        rogue {
+            dimension 'versions'
+            applicationIdSuffix '.rogue'
+        }
+    }
+    sourceSets {
+        main {
+            res.srcDirs =
+                    [
+                            'src/main/res/layouts/activities',
+                            'src/main/res/layouts/content',
+                            'src/main/res/layouts/items',
+                            'src/main/res/'
+//                            'src/main/res/layouts',
+//                            'src/main/res'
+                    ]
+        }
+        collins {
+            res.srcDirs =
+                    [
+                            'src/collins/res/layouts/activities',
+                            'src/collins/res/layouts/content',
+                            'src/collins/res/layouts/items',
+//                            'src/collins/res/layouts',
+                            'src/collins/res'
+                    ]
+
+        }
+    }
+    buildFeatures {
+        viewBinding = true
+        buildConfig = true
+    }
+    namespace 'com.tylerhosting.hoot.hoot'
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+repositories {
+//    maven { url "https://dl.bintray.com/firzenyogesh/maven" }
+}
+
+dependencies {
+    //implementation 'yogesh.firzen:FilesLister:1.0.1.g'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    //implementation 'yogesh.firzen:MukkiyaSevaigal:3.0.3'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:2.0.4'
+    //    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha4'
+    //implementation 'com.readystatesoftware.sqliteasset:sqliteassethelper:+'
+    //implementation project(path: ':externalsqliteimporter')
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:support-vector-drawable:28.0.0'
+    implementation 'android.arch.navigation:navigation-fragment:1.0.0'
+    implementation 'android.arch.navigation:navigation-ui:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}

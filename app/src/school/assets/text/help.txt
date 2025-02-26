@@ -1,0 +1,89 @@
+SEARCHING
+The Hoot search screen enables you to specify multiple criteria for each search. The functioning of some controls will differ depending on the search option selected.
+The first control is the search type which determines the results displayed. For example, the Anagram search will find words that can be formed by rearranging the letters entered.
+All of the available search options are listed below.
+The search term contains the letters used to execute the search. Some search types will allow the use of special characters, such as in a Pattern search.
+Use wildcards (?, *) in many searches.
+The ? button is a simple way to enter a blank in the search term if allowed.
+The X button next to it simply clears the search term box.
+
+The drop down at the top right allows you to specify the length of word to find.
+Begins with and Ends with filters allow you to select the prefix or suffix for the respective search options.
+These filter can also be used in conjunction with other searches so you can search for anagrams of REPRAISE ending in ER. If using the begins with, or ends with search type, if the term is not in drop down, enter it as the search term. There are two sorting options available next to the search button. Select them before pressing Search.
+
+
+
+RESULTS
+The results of searches are shown with the score at the right margin. If selected in Settings other stats are shown.
+The first column on the left shows the number of anagrams. The second column on the left show the probability. Probability is shown as a score, with the most probably being 100 and the least probable being 1.
+The first column on the right show the playability, which is also shown as a score from 1 to 100. The second column on the right is the score as recorded in the database.
+Selecting a word in the results will show the definition of the word if available.
+Long pressing on a word will show a list of subsearch options as listed below. When selecting one a new list of words is shown for that word based on the option selected.
+
+
+
+SEARCH OPTIONS
+There are several ways to conduct the same search so you can use the one that is most intuitive to you. Most searches can be done using the Pattern Search.
+Anagrams finds words with all the letters in the search box
+Letter Count (Length) shows words of the select length
+Hook Words shows words formed by adding a letter to the beginning or end. Note: You can also search words of a certain length that have hooks.
+Pattern searches based on a modified regular expression. See www.tylerhosting.com/hoot/help/pattern.html
+Contains returns words that contain the entered term
+Word Builder (subanagrams) searches for words that can be formed from any of the letters in the search terms.
+Contains All Letters (superanagrams) searches for words that contain at least all of the letters in the search term.
+Contains Any searches for words that contain any letter in the search term
+Begins With displays word that begin with the selected or entered beginning.
+Ends With displays word that end with the selected or entered beginning.
+Subwords displays subwords in the search term
+Parallel displays words that can be played parallel to the search term with one letter variance
+
+Special Search Options
+The last few options don't search directly. Instead, they either provide lists to select from or an option for further searching.
+
+Stems
+The option for Stems changes the search term box to a drop down where you can select the type of stem. When you select a type and Search the list will show all the stems for that type. Tapping on one of the stems will show the words that can be formed from that stem. That list also has all the options available from the subsearch menu described below.
+
+Predefined
+Predefined turns the search term into a dropdown list where you can select the predefined list. Most predefined lists are self-explanatory. Options that refer to Fours or Fives show that length word that begin or end with a high point tile. Top fours begin or end with JQXZ. High fours begin or end with four or five point tiles. Palindromes are words that are spelled the same forward and back. Semordnilaps are words that form a valid word when spelled forward or back (HEY, YEH). This one takes a while.
+
+Subject Lists
+Subject lists are collections of words on different subjects. They are grouped by category. When selecting a category, the list of subjects is displayed. Select one to see the words.
+
+
+
+SUBSEARCH OPTIONS
+Subsearches are searches using a selected word is the results. To execute, long press on the word and select the option from the popup menu. Most of these options are tha same as the regular search option. A few additional options include
+Blank Anagrams searches for words that contain all letter in the selected word plus a blank
+Misspells searches for words that have one letter different from the selected word
+Transpositions searches for words that have two letters transposed
+Stretches searches for words that have a letter inserted into the selected word
+Tip: In order to sort in the subsearch screen, select sorting options before subsearching.
+
+
+
+SETTINGS
+The settings menu available from the options menu enables you to specify search options and select different databases or lexicons.
+
+Database lets you select an alternate database that is stored in internal storage (emulated SD).
+Lexicon lets you select a different lexicon in the database.
+Tile Set used by pattern searches for point value patterns. The pattern search 8* will show all words that begin with a 8 point tile. This is also used when configuring or importing a lexicon to calculate the scores that are stored in that lexicon.
+Word length preference limits search to words of this length or shorter. Many search tools use 10 or 12 letter words.
+Show stats in list enables the display of number of anagrams, probability, and playability in the results in addition to the word score.
+Display name is not really used, but you can put your name in there for future use
+Add friends to messages is not used.
+
+
+
+TOOLS
+Tools include Word Judge, Lookup, and Import Lexicon.
+Word Judge is a separate screen that judges plays based on Scrabble rules. This tool can also be run from a separate shortcut app.
+Lookup is the casual lookup of a single word. It will show whether it's valid, and if available, the definition of the word.
+Import Lexicon enables app users to import a Hoot version 3 lexicon. Some can be downloaded ..
+PC users can also export a lexicon to be used by the app, or by other Hoot users. Note that Hoot may not permit you to export a lexicon of some copyrighted wordlists.
+
+
+
+Hoot desktop companion
+------------
+This app is a companion to the desktop program Hoot Lite. Using the desktop version you can create databases that can be used in the Android app. Importable lexicons and Databases are available for download from the website www.tylerhosting.com/hoot/downloads.html, including ENABLE (early Words with Friends) and ODS5 (older French). The desktop version also lets you create your own lexicon from a plain text word list, add definitions, custom subject lists, and other things. It also has slide shows and quizzes.
+

@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/multisearch_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fastScrollAlwaysVisible="true"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MultiSearchActivity"
+    tools:scrollbarAlwaysDrawVerticalTrack="true"
+    tools:showIn="@layout/activity_multisearch">
+
+
+    <View
+        android:id="@+id/control_underlay"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@android:color/holo_blue_light"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/imcheader"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/collapse"
+        tools:targetApi="n_mr1" />
+
+    <TextView
+        android:id="@+id/lblTerm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:gravity="center"
+        android:text="Subsearch not ready yet"
+        app:layout_constraintBottom_toTopOf="@+id/control_underlay"
+        app:layout_constraintEnd_toStartOf="@id/HelpGuide"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/HelpGuide"
+        style="@android:style/Widget.Button.Small"
+        android:layout_width="88dp"
+        android:layout_height="24dp"
+        android:background="@color/lightgray"
+        android:text="Help Guide"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/SearchType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/collapse"
+        android:layout_width="35dp"
+        android:layout_height="20dp"
+        android:background="@drawable/arrow"
+        android:checked="false"
+        android:textOff=""
+        android:textOn=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/SearchType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="1dp"
+        android:gravity="bottom"
+        android:paddingTop="1dp"
+        app:layout_constraintEnd_toStartOf="@id/etEntry"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/collapse" />
+
+    <EditText
+        android:id="@+id/etEntry"
+        style="@android:style/Widget.EditText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:background="@android:color/background_light"
+        android:digits="cvABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789*@?.,^+[]&lt;&gt;(|){}\\~- "
+        android:hint="@string/searchterm"
+        android:imeOptions="actionSearch|flagForceAscii"
+        android:inputType="textCapCharacters|textNoSuggestions"
+
+        android:paddingStart="8dp"
+        android:paddingLeft="8dp"
+        android:paddingEnd="2dp"
+        android:paddingRight="2dp"
+        android:singleLine="true"
+        android:textColor="@color/darkText"
+        android:textColorHighlight="@android:color/holo_blue_dark"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/SearchType"
+        app:layout_constraintEnd_toStartOf="@+id/predefined"
+        app:layout_constraintStart_toEndOf="@id/SearchType"
+        app:layout_constraintTop_toTopOf="@id/SearchType"
+        tools:background="@android:color/transparent"
+        tools:hint="Search Term" />
+<!--    android:digits="cvABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789*@?.,^+[]&lt;&gt;(|){}\\~-"-->
+
+    <Spinner
+        android:id="@+id/predefined"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:paddingStart="8dp"
+        android:paddingLeft="8dp"
+        android:paddingEnd="2dp"
+        android:paddingRight="2dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/SearchType"
+        app:layout_constraintEnd_toStartOf="@id/blank"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/etEntry"
+        app:layout_constraintTop_toTopOf="@+id/SearchType"
+        tools:visibility="visible" />
+
+
+    <Button
+        android:id="@+id/blank"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:includeFontPadding="false"
+        android:padding="0dp"
+        android:text="@string/blanktile"
+        android:textSize="16sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/SearchType"
+        app:layout_constraintEnd_toStartOf="@id/ClearEntry"
+        app:layout_constraintStart_toEndOf="@id/predefined"
+        app:layout_constraintTop_toTopOf="@id/SearchType"
+        app:layout_constraintWidth_percent=".1" />
+
+    <Button
+        android:id="@+id/ClearEntry"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:includeFontPadding="false"
+        android:padding="0dp"
+        android:text="@string/x"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/SearchType"
+        app:layout_constraintEnd_toStartOf="@id/subjects"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@id/blank"
+        app:layout_constraintTop_toTopOf="@id/SearchType"
+        app:layout_constraintWidth_percent=".1" />
+
+    <Spinner
+        android:id="@+id/subjects"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:paddingStart="8dp"
+        android:paddingLeft="8dp"
+        android:paddingEnd="2dp"
+        android:paddingRight="2dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/SearchType"
+        app:layout_constraintEnd_toStartOf="@id/tvImportFile"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/ClearEntry"
+        app:layout_constraintTop_toTopOf="@+id/SearchType"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tvImportFile"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#FFFFFF"
+        android:ellipsize="start"
+        android:paddingLeft="3dp"
+        android:singleLine="true"
+        android:text="File specification"
+        android:textColor="@color/blackText"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/SearchType"
+        app:layout_constraintEnd_toStartOf="@id/MinLength"
+        app:layout_constraintStart_toEndOf="@id/subjects"
+        app:layout_constraintTop_toTopOf="@id/SearchType"
+        app:layout_constraintWidth_percent=".6"
+        tools:visibility="gone" />
+
+    <Spinner
+        android:id="@+id/MinLength"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+
+        android:paddingTop="1dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/SearchType"
+        app:layout_constraintEnd_toStartOf="@id/MaxLength"
+        app:layout_constraintStart_toEndOf="@id/tvImportFile"
+        app:layout_constraintTop_toTopOf="@id/SearchType"
+        app:layout_constraintWidth_percent=".3"
+        tools:visibility="gone" />
+
+    <Spinner
+        android:id="@+id/MaxLength"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="1dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/SearchType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/MinLength"
+        app:layout_constraintTop_toTopOf="@id/SearchType"
+        app:layout_constraintWidth_percent=".3"
+        tools:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/criteria"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:minHeight="25dp"
+
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/SortBy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/SearchType">
+
+        <!--        <include-->
+        <!--            layout="@layout/criterion"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content" />-->
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/more"
+        android:layout_width="45dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+
+
+        android:gravity="center"
+        android:onClick="openMore"
+        android:padding="0dp"
+        android:text="\u2022 \u2022 \u2022"
+        android:textSize="12sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/ThenBy"
+        app:layout_constraintEnd_toStartOf="@+id/multiLimit"
+        app:layout_constraintStart_toEndOf="@+id/ThenBy"
+        app:layout_constraintTop_toBottomOf="@id/criteria"
+        app:layout_constraintWidth_percent=".20" />
+
+    <EditText
+        android:id="@+id/multiLimit"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:ems="10"
+        android:inputType="number"
+
+
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/specStatus"
+
+        app:layout_constraintEnd_toStartOf="@id/multStarting"
+        app:layout_constraintStart_toEndOf="@id/more"
+        app:layout_constraintTop_toBottomOf="@id/criteria"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/multStarting"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:ems="10"
+        android:inputType="number"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/specStatus"
+        app:layout_constraintEnd_toStartOf="@id/Search"
+        app:layout_constraintStart_toEndOf="@id/multiLimit"
+        app:layout_constraintTop_toBottomOf="@id/criteria"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/etFilter"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="1dp"
+        android:background="@android:color/background_light"
+        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ?"
+        android:ems="10"
+        android:hint="@string/rack_letters"
+        android:imeOptions="actionSearch|flagForceAscii"
+        android:inputType="textCapCharacters|textNoSuggestions"
+        android:paddingStart="8dp"
+
+        android:paddingLeft="8dp"
+        android:paddingEnd="2dp"
+        android:paddingRight="2dp"
+        android:singleLine="true"
+        android:textColor="@color/darkText"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/SortBy"
+        app:layout_constraintStart_toEndOf="@id/more"
+        app:layout_constraintTop_toBottomOf="@id/criteria"
+        app:layout_constraintWidth_percent=".36"
+        tools:background="@android:color/transparent" />
+
+    <Button
+        android:id="@+id/EmptyRack"
+        android:layout_width="36dp"
+        android:layout_height="0dp"
+        android:includeFontPadding="false"
+        android:padding="0dp"
+        android:text="@string/x"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/Search"
+        app:layout_constraintEnd_toStartOf="@+id/Search"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@id/etFilter"
+        app:layout_constraintTop_toTopOf="@+id/etFilter" />
+
+
+    <Button
+        android:id="@+id/btnAddCriteria"
+        android:layout_width="30dp"
+        android:layout_height="0dp"
+        android:background="@color/lightblue"
+        android:gravity="center|top"
+        android:padding="0dp"
+        android:text="+"
+        android:textColor="#1E8F23"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/specStatus"
+        app:layout_constraintEnd_toStartOf="@id/SortBy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/criteria" />
+
+    <Spinner
+        android:id="@+id/SortBy"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:padding="0dp"
+        android:textSize="14sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@id/specStatus"
+        app:layout_constraintEnd_toStartOf="@+id/ThenBy"
+        app:layout_constraintStart_toEndOf="@id/btnAddCriteria"
+        app:layout_constraintTop_toBottomOf="@id/criteria" />
+
+    <Spinner
+        android:id="@+id/ThenBy"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:padding="0dp"
+        android:textSize="14sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@id/specStatus"
+        app:layout_constraintStart_toEndOf="@+id/SortBy"
+        app:layout_constraintTop_toBottomOf="@id/criteria" />
+
+    <Button
+        android:id="@+id/Search"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="1dp"
+        android:includeFontPadding="false"
+        android:padding="0dp"
+        android:text="@string/search"
+        android:textSize="18sp"
+        android:visibility="gone"
+
+        app:layout_constraintBottom_toTopOf="@id/specStatus"
+        app:layout_constraintEnd_toStartOf="@id/SearchIcon"
+        app:layout_constraintStart_toEndOf="@id/multStarting"
+        app:layout_constraintTop_toBottomOf="@id/criteria"
+        tools:visibility="visible" />
+
+    <ImageButton
+        android:id="@+id/SearchIcon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#4CAF50"
+        android:tint="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/specStatus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/Search"
+        app:layout_constraintTop_toBottomOf="@+id/criteria"
+        app:srcCompat="@android:drawable/ic_menu_search" />
+
+<!--    <Spinner-->
+<!--        android:id="@+id/stems"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginEnd="1dp"-->
+<!--        android:layout_marginRight="1dp"-->
+<!--        android:minWidth="120dp"-->
+<!--        android:paddingStart="8dp"-->
+<!--        android:paddingLeft="8dp"-->
+<!--        android:paddingEnd="2dp"-->
+<!--        android:paddingRight="2dp"-->
+<!--        android:visibility="gone"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/subjects"-->
+<!--        app:layout_constraintHorizontal_bias="0.33"-->
+<!--        app:layout_constraintHorizontal_chainStyle="spread_inside"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/predefined"-->
+<!--        tools:layout_editor_absoluteY="95dp" />-->
+
+<!--    <Spinner-->
+<!--        android:id="@+id/subjects"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginEnd="1dp"-->
+<!--        android:minWidth="120dp"-->
+<!--        android:paddingStart="8dp"-->
+<!--        android:paddingLeft="8dp"-->
+<!--        android:paddingEnd="2dp"-->
+<!--        android:paddingRight="2dp"-->
+<!--        app:layout_constraintEnd_toStartOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.33"-->
+<!--        app:layout_constraintHorizontal_chainStyle="spread_inside"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/stems"-->
+<!--        tools:layout_editor_absoluteY="95dp" />-->
+
+    <!--    android:inputType="textCapCharacters" -->
+
+    <EditText
+        android:id="@+id/NumWords"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:background="?android:attr/colorBackground"
+        android:ems="10"
+        android:hint="Count"
+        android:inputType="number"
+        android:paddingStart="8dp"
+
+        android:paddingLeft="8dp"
+        android:paddingEnd="2dp"
+        android:paddingRight="2dp"
+        android:singleLine="false"
+        android:textColor="?android:attr/colorForeground"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="@+id/Search"
+        app:layout_constraintEnd_toStartOf="@id/StartingWith"
+        app:layout_constraintTop_toBottomOf="@+id/SortBy"
+        app:layout_constraintWidth_percent=".15" />
+
+    <EditText
+        android:id="@+id/StartingWith"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:background="?android:attr/colorBackground"
+        android:ems="10"
+        android:hint="Start"
+        android:inputType="number"
+        android:paddingStart="8dp"
+
+        android:paddingLeft="8dp"
+        android:paddingEnd="2dp"
+        android:paddingRight="2dp"
+        android:singleLine="true"
+        android:textColor="?android:attr/colorForeground"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="@+id/Search"
+        app:layout_constraintEnd_toStartOf="@id/Search"
+        app:layout_constraintStart_toEndOf="@id/NumWords"
+        app:layout_constraintTop_toBottomOf="@id/SortBy"
+        app:layout_constraintWidth_percent=".15" />
+
+    <TextView
+        android:id="@+id/specStatus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:background="@android:color/holo_blue_light"
+        android:text="Other Specifications"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/imcheader"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Search" />
+
+    <include
+        android:id="@+id/imcheader"
+        layout="@layout/mcheader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/mcresults"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/specStatus" />
+
+    <!--    android:scrollbarAlwaysDrawVerticalTrack="true"-->
+    <!--    android:scrollbarDefaultDelayBeforeFade="5000"-->
+    <!--    android:scrollbarFadeDuration="0"-->
+
+    <ListView
+        android:id="@+id/mcresults"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="4dp"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+
+        android:fadeScrollbars="false"
+        android:fastScrollAlwaysVisible="true"
+        android:fastScrollEnabled="true"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarDefaultDelayBeforeFade="0"
+        android:scrollbarFadeDuration="0"
+        android:scrollbarSize="8dp"
+        android:scrollbarStyle="outsideOverlay"
+
+        app:layout_constraintBottom_toTopOf="@id/lblStatus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imcheader"
+        app:layout_constraintVertical_bias="0.0">
+
+    </ListView>
+
+    <View
+        android:id="@+id/scroll_overlay"
+        android:layout_width="25dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:clickable="true"
+        android:focusable="false"
+        app:layout_constraintBottom_toTopOf="@+id/lblStatus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imcheader" />
+
+    <TextView
+        android:id="@+id/lblStatus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:text="@string/status"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/btnSlides"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mcresults" />
+
+    <Button
+        android:id="@+id/btnSlides"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_weight=".20"
+        android:padding="0dp"
+        android:text="Slides"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@id/keyboardview"
+        app:layout_constraintEnd_toStartOf="@id/btnQuizReview"
+        app:layout_constraintHorizontal_weight=".18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblStatus" />
+
+    <Button
+        android:id="@+id/btnQuizReview"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_weight=".26"
+        android:padding="0dp"
+        android:text="Quiz Review"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@id/keyboardview"
+        app:layout_constraintEnd_toStartOf="@id/btnQuiz"
+        app:layout_constraintHorizontal_weight=".28"
+        app:layout_constraintStart_toEndOf="@id/btnSlides"
+        app:layout_constraintTop_toBottomOf="@id/lblStatus" />
+
+    <Button
+        android:id="@+id/btnQuiz"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:padding="0dp"
+        android:text="Quiz"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@id/keyboardview"
+        app:layout_constraintEnd_toStartOf="@id/btnClear"
+        app:layout_constraintHorizontal_weight=".15"
+        app:layout_constraintStart_toEndOf="@id/btnQuizReview"
+        app:layout_constraintTop_toBottomOf="@id/lblStatus" />
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:padding="0dp"
+        android:text="Clear"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@id/keyboardview"
+        app:layout_constraintEnd_toStartOf="@id/btnNew"
+        app:layout_constraintHorizontal_weight=".15"
+        app:layout_constraintStart_toEndOf="@id/btnQuiz"
+        app:layout_constraintTop_toBottomOf="@id/lblStatus" />
+
+    <Button
+        android:id="@+id/btnNew"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_weight=".27"
+        android:padding="0dp"
+        android:text="New Search"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@id/keyboardview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight=".20"
+        app:layout_constraintStart_toEndOf="@id/btnClear"
+        app:layout_constraintTop_toBottomOf="@id/lblStatus" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:contentDescription="@string/help"
+        android:paddingEnd="16dp"
+        android:paddingRight="8dp"
+        android:visibility="gone"
+        app:backgroundTint="@color/colorPrimary"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="@+id/mcresults"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_help" />
+
+    <android.inputmethodservice.KeyboardView
+        android:id="@+id/keyboardview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

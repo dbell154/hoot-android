@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252"/>
+    <style type="text/css">
+        <!--
+        h2, h3 {
+            color: #303F9F;
+			padding-bottom:0;
+			margin-bottom:-10;
+        }
+        -->
+    </style>
+</head>
+<body>
+
+<a name="top" id="top"></a>
+<h1>Tools Guide</h1>
+<ul class="shortcuts">
+    <li><a href="#cardboxes">Cardboxes</a></li>
+    <li><a href="#subjects">Subject Lists</a></li>
+    <li><a href="#lexicons">Lexicons</a></li>
+    <li><a href="#databases">Databases</a></li>
+    <li><a href="#ongoing">Ongoing Issues</a></li>
+</ul>
+
+<p>Many of the tools provided are here because you don't have access to app-specific internal storage. While these tools enable you to store files in app-specific storage, keep in mind that anything in app-specific internal storage will be deleted if you uninstall Hoot. </p>
+<a name="cardboxes" id="cardboxes"></a>
+<h2> Cardboxes </h2>
+<h3> Copy to new lexicon</h3>
+<p>This collection of tools simply copies the cardboxes from one lexicon to another. Each lexicon may have multiple cardboxes, including Anagrams, Hooks, etc. although most people just use  anagrams. Keep in mind that although Hoot will find words in the new lexicon from each anagram, if the anagram is not in the cardbox it will not be added. In order to fully update the cardbox, add the new words to the anagrams cardbox.</p>
+<p>One way is to add all new words in CSW24, for example, is .</p>
+<ol>
+  <li>Power Search</li>
+  <li>Subject Lists &gt; CSW24 NOT CSW22 </li>
+  <li>Lengths &gt; your preferences</li>
+  <li>Search</li>
+  <li>Long press on results</li>
+  <li> Add to Card Box, Anagrams</li>
+</ol>
+<p>This is provided  because cardbox databases are located in internal memory in later versions of Android. In earlier versions you could simply use a file manager. </p>
+<h3> Import cardbox</h3>
+<p>  With this tool you can import  card boxes. Importing will completely replace the existing cardbox database. Cardbox databases are stored in folders under the name of the lexicon and include anagrams.db, hooks.db, etc. You can use cardboxes from previous versions of Hoot or the desktop version. Hoot uses the same format as Zyzzyva for cardbox databases, so you can also use cardboxes from those apps. The default location of Zyzzyva card boxes are</p>
+<p>NASPA Zyzzyva - C:\Users\&lt;User&gt;\Zyzzyva\quiz\data\&lt;lexicon&gt;  <br>
+Collins Zyzzyva - C:\Users\&lt;User&gt;\.collinszyzzyva\quiz\data\&lt;lexicon&gt;</p>
+<p>You can also use Hoot cardboxes in Zyzzyva. Find the card box and copy using the Copy Selected Files tool below. You can also use this to copy and share your cardbox with someone else. In the app, card boxes are located in databases/Cards in internal storage.</p>
+<p>Make sure you have selected the lexicon you want to use in Settings before importing and that the cardbox is useable. Note that cardboxes are downward compatible with different lexicons. You can use CSW24 card boxes in NWL23, and Hoot will simply skip anagrams that don't exist in NWL23. However, using a NWL23 cardbox in CSW24, some anagrams will be left out.</p>
+<p>While you can copy and use Zyzzyva cardboxes in the desktop version, Hoot for desktop accesses Zyzzyva card boxes directly from Zyzzyva installations.</p>
+<p>There's no way to sync cardboxes in Hoot.</p>
+<p><a href="#top">Top</a></p>
+<a name="subjects" id="subjects"></a>
+<h2> Subject lists</h2>
+<h3> Import Subject List</h3>
+<p>  You can save lists of any kind in Hoot. Lists must contain one word per line (only reads first word). You may have key word info at the beginning preceded with //, such as</p>
+<p>// List Name: Squirrels</p>
+<p>  If it's not a key word it's considered a comment</p>
+<h3>Delete Subject List</h3>
+<p>You can also delete subject lists that are outdated or that you don't use.</p>
+<h3>   Export Subject List</h3>
+<p>Lists can also be exported to share with others, or for editing. This creates a text file with key word headers. Incidentally, you can use the from file search option to load words from an exported subject list.</p>
+<p><a href="#top">Top</a></p>
+<a name="lexicons" id="lexicons"></a>
+<h2> Lexicons </h2>
+<h3>   Import lexicon</h3>
+<p>  The Hoot distribution comes with one or more lexicons in the database. You can, however, import custom lexicons in Hoot. 
+  These lexicons can be created in the desktop version of Hoot, with a few available from the Hoot web page. If you want to create your own lexicons without using the desktop version of Hoot, you simply create a  tab delimited file with the following format one entry per line. </p>
+<p> Each entry must have the word (caps), front hooks (lowercase), back hooks (lowercase), inner front hook (True or False), inner back hook (True or False), probability factor, future playability factor, orig playability factor, anagram count.</p>
+<p>For example, 
+  AA &lt;tab&gt; bcfm &lt;tab&gt; hls &lt;tab&gt; False &lt;tab&gt; False &lt;tab&gt; 32 &lt;tab&gt; 0 &lt;tab&gt; 23 &lt;tab&gt; 1</p>
+<h3>Delete lexicon</h3>
+<p>Hoot comes with several lexicons.  You can delete the ones you don't need with this tool. This will not save space unless you compact the database, but attempting to do that using the app may corrupt the database so that is not an option. You can save the database to a file and use an SQLite manager like SQLite Studio to do that and import it back into Hoot.</p>
+<p><a href="#top">Top</a></p>
+<a name="databases" id="databases"></a>
+<h2>Database and File Management</h2>
+<p>  The Hoot database contains the lexicons, definitions, and subject lists. Card box files are located in separate databases.</p>
+<h3>Backup database</h3>
+<p>  When Hoot is installed the distribution database is copied to the app-specific folder in internal storage.  If you have made changes to the database, such as adding subject lists or lexicons, you can make a backup of it before the installation of new databases. The backup database is saved with database version added to the file name. This is also useful if you want to save a database prior to implementation of new lexicons</p>
+<h3>Update distribution database</h3>
+<p>  This tool enables you  to restore the databases that was included in the distribution. </p>
+<h3> Copy Distribution database</h3>
+<p> You can now copy the distribution database to Documents or a folder of your choice. </p>
+<h3>Import database</h3>
+<p>  In new versions of Android the database must be located in internal memory to be accessible to Hoot. You can now import a saved database of previous version or one that someone shared with you. You will need to select the new database in Settings to use it and currently it is suggested that you then restart Hoot.</p>
+<h3>Copy selected files</h3>
+<p>The enables you to copy files in restricted internal storage to external storage or SD Card. You can use this to copy databases, card boxes, and any other file you imported to internal storage.</p>
+<h3> Delete internal files</h3>
+<p>Enables you to delete any files in internal storage, including databases. Note that Hoot uses aHoot.db3 as the primary database. If you delete that, Hoot will attempt to update it from distribution if you do not select another database.</p>
+<p><a href="#top">Top</a><br>
+</p>
+<a name="ongoing" id="ongoing"></a>
+<h2>Ongoing issues</h2>
+<p>You won't come across these issues very often but it's nice to know what is going on.</p>
+<h3>Changing databases</h3>
+<p>  New in Hoot is the ability to use alternate internally stored databases. With that Hoot occasionally stops after changing databases and or lexicons in internal memory and trying to do a search. I will have to analyze this. Meanwhile, I suggest you restart Hoot after changing databases.</p>
+<h3>Copying files to storage </h3>
+<p>  Using Android's Storage Access Framework (required for Android 11+), files copied to storage where the file already exists are renamed with (1) at the end of the extension instead of the name. For example it will save copies as 
+aHoot.db3(1) instead of aHoot(1).db3 which it should be.  Unless manually renamed Hoot will not recognize it as a database file. This is an Android this that I can't change.</p>
+<p><a href="#top">Top</a></p>
+</body>
+</html>

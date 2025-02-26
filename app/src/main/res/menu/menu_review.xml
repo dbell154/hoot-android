@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/anagram_review"
+        android:title="Anagrams" />
+
+    <item android:id="@+id/hooks_review"
+        android:title="Hook Words" />
+
+    <item android:id="@+id/stem_review"
+        android:title="Blank Anagrams" />
+
+</menu>

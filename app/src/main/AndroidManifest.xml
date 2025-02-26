@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:installLocation="auto">
+
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name=".Hoot"
+        android:allowBackup="true"
+        android:icon="@mipmap/howl"
+        android:label="${applicationLabel}"
+        android:preserveLegacyExternalStorage="true"
+        android:requestLegacyExternalStorage="true"
+        android:resizeableActivity="true"
+        android:roundIcon="@mipmap/roundhowl"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:targetApi="r">
+        <activity
+            android:name="com.tylerhosting.hoot.EncryptActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UpdateMessageActivity"
+            android:exported="false" />
+        <activity android:name=".TileColorActivity"
+            android:exported="false"/>
+        <activity android:name=".CardBoxHelpActivity"
+            android:exported="false"/>
+        <activity android:name=".AboutActivity"
+            android:exported="false"/>
+        <activity android:name=".AnagramQuizActivity"
+            android:exported="false"/>
+        <activity android:name=".CardBoxActivity"
+            android:exported="false"/>
+        <activity android:name=".CardMgmtActivity"
+            android:exported="false"/>
+        <activity android:name=".CardAnagramQuizActivity" />
+        <activity android:name=".CardQuizActivity" />
+        <activity android:name=".ClockHelpActivity" />
+        <activity android:name=".HelpActivity" />
+        <activity android:name=".MultiHelpActivity" />
+        <activity android:name=".ImportSubjectListActivity" />
+        <activity android:name=".ListSlidesActivity" />
+        <activity android:name=".ReviewActivity" />
+        <activity android:name=".StorageRequestActivity" />
+        <activity android:name=".ToolsActivity" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:icon="@mipmap/howl"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!--  -->
+        <activity
+            android:name=".SearchActivity"
+            android:inputType="textNoSuggestions|textVisiblePassword"
+            android:windowSoftInputMode="stateVisible">
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.VIEW" />-->
+
+            <!--                <category android:name="android.intent.category.DEFAULT" />-->
+            <!--                <category android:name="android.intent.category.BROWSABLE" />-->
+
+            <!--                <data-->
+            <!--                    android:host="www.tylerhosting.com"-->
+            <!--                    android:scheme="http" />-->
+            <!--            </intent-filter>-->
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+        </activity>
+        <activity
+            android:name=".MultiSearchActivity"
+            android:inputType="textNoSuggestions|textVisiblePassword"
+            android:windowSoftInputMode="stateVisible">
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.VIEW" />-->
+
+            <!--                <category android:name="android.intent.category.DEFAULT" />-->
+            <!--                <category android:name="android.intent.category.BROWSABLE" />-->
+
+            <!--                <data-->
+            <!--                    android:host="www.tylerhosting.com"-->
+            <!--                    android:scheme="http" />-->
+            <!--            </intent-filter>-->
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".SearchActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.tylerhosting.hoot.hoot.SearchActivity" />
+        </activity>
+        <activity
+            android:name=".WordJudgeActivity"
+            android:exported="true"
+            android:icon="@mipmap/judge"
+            android:inputType="textNoSuggestions|textVisiblePassword"
+            android:parentActivityName=".ToolsActivity"
+            android:windowSoftInputMode="stateVisible"
+            android:label="@string/app_wj">
+        </activity> <!-- android:theme="@style/DarkTheme" -->
+            <!--            <intent-filter android:label="@string/app_wj">-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
+
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.VIEW" />-->
+
+            <!--                <category android:name="android.intent.category.BROWSABLE" />-->
+
+            <!--                <data-->
+            <!--                    android:host="www.tylerhosting.com"-->
+            <!--                    android:scheme="http" />-->
+            <!--            </intent-filter>-->
+        <activity
+            android:name=".ClockActivity"
+            android:icon="@drawable/pause_button"
+            android:label="@string/app_timeclock"
+            android:parentActivityName=".ToolsActivity">
+            <!--            <intent-filter android:label="@string/app_timeclock">-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
+
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.VIEW" />-->
+
+            <!--                <category android:name="android.intent.category.BROWSABLE" />-->
+
+            <!--                <data-->
+            <!--                    android:host="www.tylerhosting.com"-->
+            <!--                    android:scheme="http" />-->
+            <!--            </intent-filter>-->
+        </activity> <!-- android:theme="@style/DarkTheme" -->
+        <activity
+            android:name=".ImportLexiconActivity"
+            android:label="@string/import_lexicon"
+            android:parentActivityName=".ToolsActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.tylerhosting.hoot.hoot.ToolsActivity" />
+        </activity>
+        <activity
+            android:name=".LookupActivity"
+            android:label="@string/lookup"
+            android:exported="true"
+            android:inputType="textNoSuggestions|textVisiblePassword"
+            android:parentActivityName=".ToolsActivity"
+            android:windowSoftInputMode="stateVisible">
+        </activity>
+        <activity
+            android:name=".cLookupActivity"
+            android:label="@string/lookup"
+            android:exported="true"
+            android:inputType="textNoSuggestions|textVisiblePassword"
+            android:parentActivityName=".SearchActivity"
+            android:windowSoftInputMode="stateVisible">
+<!--        <intent-filter>-->
+<!--            <action android:name="android.intent.action.PROCESS_TEXT" />-->
+<!--            <category android:name="android.intent.category.DEFAULT" />-->
+<!--            <data android:mimeType="text/plain" />-->
+<!--        </intent-filter>-->
+        </activity>
+
+
+        <activity
+            android:name=".QuizActivity"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".RecallQuizActivity"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".SlidesActivity"
+            android:label="@string/title_activity_slides"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SubActivity"
+            android:label="@string/title_activity_sub"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".HelpFileActivity"
+            android:label="@string/helpfileactivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TileTrackerActivity"
+            android:label="@string/title_activity_tile_tracker"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <uses-library
+            android:name="com.sec.android.app.multiwindow"
+            android:required="false" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="com.samsung.android.sdk.multiwindow.penwindow.enable"
+            android:value="true" />
+        <meta-data
+            android:name="com.sec.android.support.multiwindow"
+            android:value="true" />
+    </application>
+
+</manifest>

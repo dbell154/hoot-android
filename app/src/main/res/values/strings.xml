@@ -1,0 +1,255 @@
+<resources>
+
+    <string name="about_hoot">About Hoot</string>
+    <string name="hoot_word_judge">Hoot Word Judge</string>
+    <string name="hoot_timeclock">Hoot Time Clock</string>
+    <string name="word_judge">Word Judge</string>
+
+    <string name="xmulti_search">
+        <![CDATA[Multi Search\n
+(work in progress)]]>
+    </string>
+    <string name="multi_search">Multi Search <br />
+(work in progress)</string>
+    <string name="timeclock">Time Clock</string>
+    <string name="anagrams">Anagrams</string>
+    <string name="word_builder">Word Builder</string>
+    <string name="hook_words">Hook Words</string>
+    <string name="import_lexicon">Import Lexicon</string>
+    <string name="tools">Tools</string>
+    <string name="whatever">Whatever you find your hands to do, do it with all your strength. \n
+\t\t\t - Eccl. 9:10</string>
+    <string name="lexicon_name">Lexicon Name</string>
+    <string name="lexicon_source">Lexicon Source</string>
+    <string name="lexicon_notice_copyright">Lexicon Notice (Copyright)</string>
+    <string name="lexicon_description">Lexicon Description</string>
+    <string name="help">Help</string>
+    <string name="import_lexicon_beta">Import Lexicon</string>
+    <string name="backup_database">Backup Internal Database</string>
+    <string name="rack_letters">Rack Letters</string>
+    <string name="title_activity_slides">SlidesActivity</string>
+
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="title_activity_tile_tracker">Tile Tracker</string>
+    <string name="count_correction">Check to add to \nletter count</string>
+    <string name="title_activity_sub">SubActivity</string>
+
+
+    <!-- Strings related to Settings -->
+    <string name="title_activity_settings">Settings</string>
+    <string name="pref_header_general">General</string>
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example menu for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+    <string name="pref_header_notifications">Notifications</string>
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="delete_list">Delete List</string>
+    <string name="h">H</string>
+    <string name="title_activity_update_alert">UpdateAlertActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+
+    <string name="update_text">\nThis version of Hoot includes an updated database with CSW24 and removes the CSW19 and CSW 22 lexicons.\n
+The current database will be backed up to internal memory. You can delete the old database using the option in Tools.\n\n
+Are you sure you want to update now?\n</string>
+
+    <string name="power_search">Power Search</string>
+
+
+    <string name="app_name">Hoot</string>
+    <string name="app_name_beta">Hoot beta</string>
+    <string name="app_name_debug">Hoot debug</string>
+    <string name= "app_wj">Hoot Word Judge</string>
+    <string name= "app_timeclock">Hoot Time Clock</string>
+    <string name ="google_play_link">https://play.google.com/store/apps/details?id=com.tylerhosting.hoot.wj2</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="action_tools">Tools</string>
+    <string name="searchtype">Search Type</string>
+    <string name="searchterm">Search Term</string>
+    <string name="clear">Clear</string>
+    <string name="minlen">Min Length</string>
+    <string name="maxlen">Max Length</string>
+    <string name="beginswith">Begins\nwith</string>
+    <string name="endswith">Ends\nwith</string>
+    <string name="x" translatable="false">X</string>
+    <string name="blank">\?</string>
+    <string name="searching">Searching . . .</string>
+    <string name="status">Status</string>
+    <string name="copyrightnotice">Notice</string>
+    <string name="search">Search</string>
+    <string name="exit">Exit</string>
+    <string name="copy_database">Copy Internal Database</string>
+    <string name="select_database">Select Database</string>
+    <string name="lookup">Lookup</string>
+    <string name="blanktile">\?</string>
+    <string name="judge">Judge</string>
+    <string name="enterplays">Enter plays here</string>
+    <string name="select_lexicon">Select Lexicon</string>
+
+    <string name="contains">Contains</string>
+
+
+    <string-array name="search_array">
+        <item>Search Type</item>
+    </string-array>
+    <string-array name="sortby_array">
+        <item>Sort by..</item>
+        <item>Length</item>
+        <item>Anagrams</item>
+    </string-array>
+    <string-array name="thenby_array">
+        <item>Then by..</item>
+        <item>Word</item>
+    </string-array>
+    <string-array name="stem_array">
+        <item>Search Type</item>
+    </string-array>
+
+    <string-array name="length_array">
+        <item>2 letters</item>
+        <item>3 letters</item>
+        <item>4 letters</item>
+        <item>5 letters</item>
+        <item>6 letters</item>
+        <item>7 letters</item>
+        <item>8 letters</item>
+        <item>9 letters</item>
+        <item>10 letters</item>
+        <item>11 letters</item>
+        <item>12 letters</item>
+        <item>13 letters</item>
+        <item>14 letters</item>
+        <item>15 letters</item>
+        <item>16 letters</item>
+        <item>17 letters</item>
+        <item>18 letters</item>
+        <item>19 letters</item>
+        <item>20 letters</item>
+        <item>21 letters</item>
+    </string-array>
+
+    <string-array name="altoptions">
+        <item>Original</item>
+        <item>Alternate</item>
+        <item>Both</item>
+    </string-array>
+
+    <string-array name="tapoptions">
+        <item>Definition</item>
+        <item>Anagrams</item>
+        <item>Hook Words</item>
+    </string-array>
+
+    <string-array name="themes">
+        <item>Light Theme</item>
+<!--        <item>Red Theme</item>-->
+<!--        <item>Pink Theme</item>-->
+        <item>Dark Theme</item>
+
+<!--        <item>Pink Theme</item>-->
+    </string-array>
+
+    <string-array name="cardlocations">
+        <item>Internal</item>
+        <item>Storage</item>
+    </string-array>
+
+    <string-array name="begins_array">
+        <item></item>
+        <item>AB</item>
+        <item>PRE</item>
+        <item>RE</item>
+    </string-array>
+    <string-array name="ends_array">
+        <item></item>
+        <item>ABLE</item>
+        <item>ER</item>
+        <item>Z</item>
+    </string-array>
+
+    <string-array name = "lexicons_array">
+        <item>WJ2-2016</item>
+        <item>CSW15</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="tiles_array">
+        <item>English Scrabble</item>
+        <item>English Friends</item>
+        <item>French Scrabble</item>
+        <item>Super Scrabble</item>
+        <item>WordSmith</item>
+    </string-array>
+
+
+        <string-array name="qtypes">
+            <item>Anagrams</item>
+            <item>Hooks</item>
+            <item>Blank Anagrams</item>
+        </string-array>
+
+</resources>
